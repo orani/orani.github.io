@@ -1,0 +1,31 @@
+@charset "utf-8";html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+html,body{height:100%}
+header,footer,article,section,nav,menu,hgroup{display:block}
+a{text-decoration:none}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+:focus{outline:0}
+ins{text-decoration:none}
+del{text-decoration:line-through}
+table{border-collapse:collapse;border-spacing:0}
+*{margin:0;padding:0}
+html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;position:relative;line-height:1.67em;background:#fff;color:#555;text-align:left;height:100%}
+.clear{clear:both;height:0;width:0;line-height:0;font-size:0}
+.hidden{display:none}
+#site-wrapper{height:auto;position:relative;overflow:hidden;background:url(images/grunge00.jpg) repeat-x top left}
+.container{position:relative;margin:0 auto;width:960px}
+.no-margin{margin-right:0!important}
+h1{font-weight:normal;font-size:40px;line-height:40px}
+h2{font-weight:normal;font-size:34px;line-height:34px}
+h3{font-weight:normal;font-size:28px;line-height:28px}
+h4{font-weight:normal;font-size:22px;line-height:22px}
+h5{font-weight:normal;font-size:17px;line-height:17px}
+h6{font-weight:normal;font-size:14px;line-height:14px}
+h1,h2,h3,h4,h5,h6{margin-bottom:12px;color:#333;padding-left:1px}
+
+#hosting-plans{position:relative;margin-bottom:30px;height:auto;overflow:hidden}
+.plan{position:relative;width:400px;height:auto;overflow:hidden;margin-right:30px;float:left;background:url("plan-sha.png") no-repeat scroll center bottom transparent;padding-bottom:19px}
+.plan .title{height:45px;width:400px;-moz-border-radius-topleft:10px;-moz-border-radius-topright:10px;-webkit-border-top-left-radius:10px;-webkit-border-top-right-radius:10px;background:url(plan-tit.png) no-repeat top left}
+.plan .title h4{color:#fff;padding:9px;margin-bottom:0}
+.plan .content{border:#a0a0a0 1px solid;-moz-border-radius-bottomleft:10px;-moz-border-radius-bottomright:10px;-webkit-border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;height:auto;padding:10px 10px 0;background:#fff  no-repeat center bottom}
