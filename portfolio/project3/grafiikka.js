@@ -12,6 +12,7 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 		{ 		kuvadata[x][i]=(kuvadata[x][i]/vuosi_nolla)*100;		} 		}
 		prosenttia=false;
 	  }
+	  if (tyyppi=="NP") { prosenttia=true; }
 		var rivit = new Array();
 		rivit.push(otsakkeet);
 		
