@@ -74,12 +74,14 @@ function raportti() {
 	
 	if (document.getElementById("vaestotietokuva_tyyppi_P").checked ) { tyyppi="P"; }
 	if (document.getElementById("vaestotietokuva_tyyppi_N").checked ) { tyyppi="N"; }
+	if (document.getElementById("vaestotietokuva_tyyppi_NP").checked ) { tyyppi="NP"; }
 	if (document.getElementById("vaestotietokuva_tyyppi_0").checked ) { tyyppi="0"; }
 		
 	piirra(vaestokuvaData,['Vuosi','Työikäisiä','Eläkeikäisiä','Alaikäisiä'],"Väestönkehitys",'vaestotietokuva',tyyppi);
 
 	if (document.getElementById("tyollisyyskuva_tyyppi_P").checked ) { tyyppi="P"; }
 	if (document.getElementById("tyollisyyskuva_tyyppi_N").checked ) { tyyppi="N"; }
+	if (document.getElementById("tyollisyyskuva_tyyppi_NP").checked ) { tyyppi="NP"; }
 	if (document.getElementById("tyollisyyskuva_tyyppi_0").checked ) { tyyppi="0"; }
 
 	piirra(tyollisyyskuvaData,['Vuosi','Työllisiä (18-64)',"Työttömiä (18-64)"],"Työllisyyden kehitys",'tyollisyyskuva',tyyppi);
