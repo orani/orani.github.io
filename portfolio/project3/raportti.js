@@ -62,8 +62,8 @@ function raportti() {
 	
 	var tyollisyyskuvaData = new Array();
 	tyollisyyskuvaData[0] = vuodet;
-	tyollisyyskuvaData[1] = tyollisia;
-	tyollisyyskuvaData[2] = tyottomia;
+	tyollisyyskuvaData[1] = tyollisiaTyoikaisia;
+	tyollisyyskuvaData[2] = tyottomiaTyoikaisia;
 
 	
 	var huoltosuhdeData = new Array();
@@ -81,7 +81,7 @@ function raportti() {
 
 	if (document.getElementById("tyollisyyskuva_tyyppi_P").checked ) { tyyppi="P"; }
 	if (document.getElementById("tyollisyyskuva_tyyppi_N").checked ) { tyyppi="N"; }
-	if (document.getElementById("tyollisyyskuva_tyyppi_NP").checked ) { tyyppi="NP"; }
+	//if (document.getElementById("tyollisyyskuva_tyyppi_NP").checked ) { tyyppi="NP"; }
 	if (document.getElementById("tyollisyyskuva_tyyppi_0").checked ) { tyyppi="0"; }
 
 	piirra(tyollisyyskuvaData,['Vuosi','Työllisiä (18-64)',"Työttömiä (18-64)"],"Työllisyyden kehitys",'tyollisyyskuva',tyyppi);
