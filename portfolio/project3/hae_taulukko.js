@@ -2,11 +2,11 @@
 
 function haetaulukko(kokomaa) {
 	
-	
+	kohde="taulukkodata";
 	
 	var kuntakoodi=document.getElementById("taulukoitavakuntakoodi").innerHTML;
 	if (kokomaa==1) { kuntakoodi='SSS'; }
-	document.getElementById("taulukkodata").innerHTML="";
+	document.getElementById(kohde).innerHTML="";
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
 	vuodet = new Array();
@@ -37,7 +37,7 @@ function haetaulukko(kokomaa) {
 			ptoim=0;
 			ika=0;
 			
-			document.getElementById("taulukkodata").innerHTML=document.getElementById("taulukkodata").innerHTML+
+			document.getElementById(kohde).innerHTML=document.getElementById(kohde).innerHTML+
 			ptoim_koodit[ptoim]+";"+
 			ika_koodit[ika]+
 			";";
@@ -49,16 +49,16 @@ function haetaulukko(kokomaa) {
 			for (i=0;i<(vuodet.length*ptoim_ika_luokkia);i++) {
 			
 			if (rivi==vuodet.length) { rivi=0; 
-			document.getElementById("taulukkodata").innerHTML=document.getElementById("taulukkodata").innerHTML+":<br>"+ptoim_koodit[ptoim]+";"+
+			document.getElementById(kohde).innerHTML=document.getElementById(kohde).innerHTML+":<br>"+ptoim_koodit[ptoim]+";"+
 			ika_koodit[ika]+";";
 			++ika;
 			if (ika==ika_koodit.length) { ika=0; ++ptoim;; }
 			if (ptoim==ptoim_koodit.length) { ptoim=0 }
 			} 
 			rivi=rivi+1;
-			document.getElementById("taulukkodata").innerHTML=document.getElementById("taulukkodata").innerHTML+luvut[i]+","; 
+			document.getElementById(kohde).innerHTML=document.getElementById(kohde).innerHTML+luvut[i]+","; 
  			}
-		    document.getElementById("taulukkodata").innerHTML=document.getElementById("taulukkodata").innerHTML+";"; 
+		    document.getElementById(kohde).innerHTML=document.getElementById(kohde).innerHTML+";"; 
 			}
 		}
 	
