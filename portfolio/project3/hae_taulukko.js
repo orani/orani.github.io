@@ -159,10 +159,10 @@ function haekokomaa() {
 }
 
 
-function haeluku(poiminta) {
+function haeluku(poiminta,kokomaa) {
 	
-	
-	luvut=document.getElementById("taulukkodata").innerHTML.split(":");
+	if (kokomaa==0) { luvut=document.getElementById("taulukkodata").innerHTML.split(":"); }
+	if (kokomaa==1) { luvut=document.getElementById("taulukkodata_kokomaa").innerHTML.split(":"); }
 	
 	for (i=0;i<luvut.length;++i) {		if (luvut[i].indexOf(poiminta)>-1) { palautus=luvut[i] }	}
 	palautus=palautus.replace('<br>','');
