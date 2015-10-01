@@ -1,8 +1,11 @@
 	
 
-function haetaulukko() {
+function haetaulukko(kokomaa) {
+	
+	
 	
 	var kuntakoodi=document.getElementById("taulukoitavakuntakoodi").innerHTML;
+	if (kokomaa==1) { kuntakoodi='SSS'; }
 	document.getElementById("taulukkodata").innerHTML="";
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
