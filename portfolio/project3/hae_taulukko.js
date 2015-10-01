@@ -89,7 +89,7 @@ function haekokomaa() {
 	
 	var kuntakoodi='SSS'
 	//if (kokomaa==1) { kuntakoodi='SSS'; kohde="taulukkodata_kokomaa" }
-	document.getElementById(kohde).innerHTML="";
+	document.getElementById(kohde).innerHTML="SSS";
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
 	vuodet = new Array();
