@@ -27,14 +27,14 @@ function raportti_alustus(e) {
 
 function raportti() {
 	
-	vakiluku=haeluku('SS;SSS;');
-	tyollisiaTyoikaisia=haeluku('11;18-64;');
-	tyottomiaTyoikaisia=haeluku('12;18-64;');
-	tyollisia=haeluku('11;SSS;');
-	tyottomia=haeluku('12;SSS;');
-	tyoikaisia=haeluku('SS;18-64;');
-	alaikaisia=haeluku('SS;0-17;');
-	elakeikaisia=haeluku('SS;65+;');
+	vakiluku=haeluku('SS;SSS;',0);
+	tyollisiaTyoikaisia=haeluku('11;18-64;',0);
+	tyottomiaTyoikaisia=haeluku('12;18-64;',0);
+	tyollisia=haeluku('11;SSS;',0);
+	tyottomia=haeluku('12;SSS;',0);
+	tyoikaisia=haeluku('SS;18-64;',0);
+	alaikaisia=haeluku('SS;0-17;',0);
+	elakeikaisia=haeluku('SS;65+;',0);
 	
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
