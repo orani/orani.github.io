@@ -17,7 +17,7 @@ function raportti_alustus(e) {
 	document.getElementById("taulukoitavakuntakoodi").innerHTML=kuntakoodi;
 	
 	
-	haetaulukko();
+	haetaulukko(0);
 	
 	}
 	
