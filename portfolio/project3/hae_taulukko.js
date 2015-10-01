@@ -5,7 +5,7 @@ function haetaulukko(kokomaa) {
 	kohde="taulukkodata";
 	
 	var kuntakoodi=document.getElementById("taulukoitavakuntakoodi").innerHTML;
-	if (kokomaa==1) { kuntakoodi='SSS'; }
+	if (kokomaa==1) { kuntakoodi='SSS'; kohde="taulukkodata_kokomaa" }
 	document.getElementById(kohde).innerHTML="";
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
