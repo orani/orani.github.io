@@ -18,7 +18,7 @@ function raportti_alustus(e) {
 	
 	
 	haetaulukko(0);
-	
+	haetaulukko(1); 
 	}
 	
 	
