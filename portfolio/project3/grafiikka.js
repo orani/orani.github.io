@@ -55,7 +55,7 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 		//width:'100%',
 		isStacked:prosenttia
       };
-	  if (tyyppi=="0") {  var chart =  new google.visualization.LineChart(document.getElementById(kohde)); 	 } 
+	  if (tyyppi=="0" || tyyppi=="100") {  var chart =  new google.visualization.LineChart(document.getElementById(kohde)); 	 } 
 	  else {    var chart = new google.visualization.ColumnChart(document.getElementById(kohde)); }
       chart.draw(data, options);
 	
