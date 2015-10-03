@@ -36,6 +36,9 @@ function raportti() {
 	alaikaisia=haeluku('SS;0-17;',0);
 	elakeikaisia=haeluku('SS;65+;',0);
 	
+	vakilukuKokomaa=haeluku('SS;SSS;',1);
+	
+	
 	var ekavuosi = parseInt(document.getElementById("vuosi_min").value);
 	var vikavuosi = parseInt(document.getElementById("vuosi_max").value);
 
@@ -53,7 +56,7 @@ function raportti() {
 	
 	}
 	
-	document.getElementById("kpl_1").innerHTML="Vuonna "+vikavuosi+" kunnassa oli "+vakiluku[vuodet.length-1]+" henkilöä, joista "+alaikaisia[vuodet.length-1]+" oli alaikäisiä";
+	document.getElementById("kpl_1").innerHTML="Vuonna "+vikavuosi+" kunnassa oli "+vakiluku[vuodet.length-1]+" henkilöä, joista "+alaikaisia[vuodet.length-1]+" oli alaikäisiä.<br>Koko maassa oli samana vuonna "+vakilukuKokomaa[vuodet.length-1]+" henkilöä";
 	
 	var vaestokuvaData = new Array();	
 	vaestokuvaData[0] = vuodet;
