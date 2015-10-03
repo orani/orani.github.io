@@ -16,7 +16,7 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 	   if (tyyppi=="0") {
 		for (x=1;x<kuvadata.length;x++) {		
 			vuosi_nolla=kuvadata[x][0];	
-			for (i=0;i<kuvadata[0].length;i++) 	{ kuvadata[x][i]=(vuosi_nolla-kuvadata[x][i]);	} 
+			for (i=0;i<kuvadata[0].length;i++) 	{ kuvadata[x][i]=(kuvadata[x][i]-vuosi_nolla);	} 
 		}
 		prosenttia=false;
 	  }
