@@ -25,7 +25,16 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 	  if (tyyppi=="NP") { prosenttia=true; }
 		var rivit = new Array();
 		rivit.push(otsakkeet);
-		
+	
+	
+	if (kuvadata.length==5) {
+		for (i=0;i<kuvadata[0].length;i++) { vuosi=kuvadata[0][i].toString(); 
+		luku=parseInt(kuvadata[1][i]);
+		luku2=parseInt(kuvadata[2][i]);
+		luku3=parseInt(kuvadata[3][i]);
+		luku4=parseInt(kuvadata[4][i]);
+        rivit.push([vuosi,luku,luku2,luku3,luku4]); 		}
+	    }	
 		if (kuvadata.length==4) {
 		for (i=0;i<kuvadata[0].length;i++) { vuosi=kuvadata[0][i].toString(); 
 		luku=parseInt(kuvadata[1][i]); luku2=parseInt(kuvadata[2][i]);	luku3=parseInt(kuvadata[3][i]);
@@ -41,6 +50,8 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 		luku=parseInt(kuvadata[1][i]); 
         rivit.push([vuosi,luku]); 		}
 	    }
+	
+	
 	
 		var data = google.visualization.arrayToDataTable(rivit);
 	  
