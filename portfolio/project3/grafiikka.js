@@ -7,11 +7,20 @@ function piirra(kuvadata,otsakkeet,otsikko,kohde,tyyppi) {
 	  
 	  if (tyyppi=="P") { prosenttia='percent'; }
 	  if (tyyppi=="N") { prosenttia=false; }
-	  if (tyyppi=="0") {
+	  if (tyyppi=="100") {
 		for (x=1;x<kuvadata.length;x++) {		vuosi_nolla=kuvadata[x][0];		for (i=0;i<kuvadata[0].length;i++) 
 		{ 		kuvadata[x][i]=(kuvadata[x][i]/vuosi_nolla)*100;		} 		}
 		prosenttia=false;
 	  }
+	   if (tyyppi=="0") {
+		for (x=1;x<kuvadata.length;x++) {		
+			vuosi_nolla=kuvadata[x][0];	
+			for (i=0;i<kuvadata[0].length;i++) 	{ kuvadata[x][i]=(vuosi_nolla-kuvadata[x][i]);	} 
+		}
+		prosenttia=false;
+	  }
+	  
+	  
 	  if (tyyppi=="NP") { prosenttia=true; }
 		var rivit = new Array();
 		rivit.push(otsakkeet);
