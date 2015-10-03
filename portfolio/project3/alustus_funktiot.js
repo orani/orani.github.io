@@ -28,8 +28,7 @@ Array.prototype.parsi = function() {
 
 
 function vaihtoehdot() {
-alert('vaihtoehdot alkaa!');
-	alert(metatiedot.variables.length);
+
 	for (muuttuja=0;muuttuja<metatiedot.variables.length;muuttuja++)  {
 	if (metatiedot.variables[muuttuja].code=="Alue") {
 		kuntanimikkeet=metatiedot.variables[muuttuja].valueTexts;
@@ -37,7 +36,7 @@ alert('vaihtoehdot alkaa!');
 		 }
 	} 
 	kuntanimikkeet.parsi();
-	alert('nimikeet parsittu');
+
 	var sisalto;
 	for (muuttuja=0; muuttuja<kuntakoodit.length; muuttuja++) {
 	    sisalto+="<option value="+kuntanimikkeet[muuttuja]+"></option>";
@@ -46,10 +45,10 @@ alert('vaihtoehdot alkaa!');
 	
 	   
 	}
-	alert('sisalto muodostettu');
+
 	document.getElementById("kuntaKooditNimet").innerHTML=sisalto;
 	
-alert('vaihtoehdot ok');	
+	
 	
 }
 
@@ -68,5 +67,4 @@ xmlhttp.onreadystatechange=function() {
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-alert('metat ok');
 }
