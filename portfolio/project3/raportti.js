@@ -80,6 +80,7 @@ function raportti() {
 	if (document.getElementById("vaestotietokuva_tyyppi_N").checked ) { tyyppi="N"; }
 	if (document.getElementById("vaestotietokuva_tyyppi_NP").checked ) { tyyppi="NP"; }
 	if (document.getElementById("vaestotietokuva_tyyppi_0").checked ) { tyyppi="0"; }
+	if (document.getElementById("vaestotietokuva_tyyppi_100").checked ) { tyyppi="100"; }
 		
 	piirra(vaestokuvaData,['Vuosi','Työikäisiä','Eläkeikäisiä','Alaikäisiä'],"Väestönkehitys",'vaestotietokuva',tyyppi);
 
