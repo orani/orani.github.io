@@ -28,7 +28,7 @@ Array.prototype.parsi = function() {
 
 
 function vaihtoehdot() {
-
+alert('vaihtoehdot alkaa');
 
 	for (muuttuja=0;muuttuja<metatiedot.variables.length;muuttuja++)  {
 	if (metatiedot.variables[muuttuja].code=="Alue") {
@@ -37,6 +37,7 @@ function vaihtoehdot() {
 		 }
 	} 
 	kuntanimikkeet.parsi();
+	alert('nimikeet parsittu');
 	var sisalto;
 	for (muuttuja=0; muuttuja<kuntakoodit.length; muuttuja++) {
 	    sisalto+="<option value="+kuntanimikkeet[muuttuja]+"></option>";
@@ -45,6 +46,7 @@ function vaihtoehdot() {
 	
 	   
 	}
+	alert('sisalto muodostettu');
 	document.getElementById("kuntaKooditNimet").innerHTML=sisalto;
 	
 alert('vaihtoehdot ok');	
