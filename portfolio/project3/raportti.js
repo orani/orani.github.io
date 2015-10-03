@@ -88,12 +88,14 @@ function raportti() {
 	if (document.getElementById("tyollisyyskuva_tyyppi_N").checked ) { tyyppi="N"; }
 	//if (document.getElementById("tyollisyyskuva_tyyppi_NP").checked ) { tyyppi="NP"; }
 	if (document.getElementById("tyollisyyskuva_tyyppi_0").checked ) { tyyppi="0"; }
+	if (document.getElementById("tyollisyyskuva_tyyppi_100").checked ) { tyyppi="100"; }
 
 	piirra(tyollisyyskuvaData,['Vuosi','Työllisiä (18-64)',"Työttömiä (18-64)"],"Työllisyyden kehitys",'tyollisyyskuva',tyyppi);
    
 	if (document.getElementById("huoltosuhdekuva_tyyppi_N").checked ) { tyyppi="N"; }
 	if (document.getElementById("huoltosuhdekuva_tyyppi_0").checked ) { tyyppi="0"; }
-
+	if (document.getElementById("huoltosuhdekuva_tyyppi_100").checked ) { tyyppi="100"; }
+	
    piirra(huoltosuhdeData,['Vuosi','Väestöllinen huoltosuhde','Taloudellinen huoltosuhde'],"Huoltosuhteiden kehitys",'huoltosuhdekuva',tyyppi);
    
 	
