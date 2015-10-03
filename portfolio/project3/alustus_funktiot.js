@@ -28,17 +28,7 @@ Array.prototype.parsi = function() {
 
 
 function vaihtoehdot() {
-	var url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/vrm/tyokay/010_tyokay_tau_101.px";
-	var xmlhttp = new XMLHttpRequest();
-	metatiedot = new Array();
-	xmlhttp.onreadystatechange=function() {
-	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-		metatiedot=JSON.parse(xmlhttp.responseText);
-	    //document.getElementById("tulokset").innerHTML ="Ladataan..";
-	    }
-	}
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+
 
 	for (muuttuja=0;muuttuja<metatiedot.variables.length;muuttuja++)  {
 	if (metatiedot.variables[muuttuja].code=="Alue") {
