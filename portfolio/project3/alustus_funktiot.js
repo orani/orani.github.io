@@ -35,8 +35,7 @@ function vaihtoehdot() {
 		kuntanimikkeet=metatiedot.variables[muuttuja].valueTexts;
 		kuntakoodit=metatiedot.variables[muuttuja].values;
 		 }
-	}
-	// Parsitaan 
+	} 
 	kuntanimikkeet.parsi();
 	var sisalto;
 	for (muuttuja=0; muuttuja<kuntakoodit.length; muuttuja++) {
@@ -48,6 +47,7 @@ function vaihtoehdot() {
 	}
 	document.getElementById("kuntaKooditNimet").innerHTML=sisalto;
 	
+alert('vaihtoehdot ok');	
 	
 }
 
@@ -60,11 +60,11 @@ metatiedot = new Array();
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 	metatiedot=JSON.parse(xmlhttp.responseText);
-    //document.getElementById("tulokset").innerHTML ="Ladataan..";
+ 
     }
 }
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-
+alert('metat ok');
 }
