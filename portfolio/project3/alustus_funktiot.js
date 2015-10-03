@@ -29,7 +29,7 @@ Array.prototype.parsi = function() {
 
 function vaihtoehdot() {
 alert('vaihtoehdot alkaa');
-
+	alert(metatiedot.variables.length);
 	for (muuttuja=0;muuttuja<metatiedot.variables.length;muuttuja++)  {
 	if (metatiedot.variables[muuttuja].code=="Alue") {
 		kuntanimikkeet=metatiedot.variables[muuttuja].valueTexts;
