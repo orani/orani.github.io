@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hakisin, mut se on Helsingissä eli avointen työpaikkojen sijainti</title>
+    <title>Orani</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -71,17 +71,17 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
+                <h1>Hakisin, mut se on Helsingissä eli avointen työpaikkojen sijainti</h1>
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
+                    by <a href="mailto:topias.pyykkonen@gmail.com">Topias</a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on January 2, 2016 at 9:00 PM</p>
 
                 <hr>
 
@@ -92,10 +92,31 @@
 
                 <!-- Post Content -->
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+             
+<p>Työttömyydestä keskusteltaessa vertaillaan työttömien ja avointen työpaikkojen määriä ja ihmetellään, miten samanaikaisesti voi olla avoimia työpaikkoja ja työttömiä. Kyse on tietysti siitä, ettei työpaikan ominaisuudetvaatimukset ja/tai työntekijän ominaisuudet/vaatimukset kohtaa. Yksi tällainen ns. kohtaanto-ongelma  syntyy, mikäli työpaikka sijaitsee kaukana työttömän henkilön kodista. Työtön henkilö on nykyisellään velvoitettu ottamaan vastaan työvoimahallinnon tarjoaman työpaikan mikäli se sijaitsee 80 kilometrin päässä. 
+</p>
+<p>
+Jotta voitaisiin laskea, kuinka kaukana avoimet työpaikat sijaitsevat työttömistä – eli selvittää alueellisen kohtaanto-ongelman laajuus – pitäisi kuitenkin tietää työpaikan ja työttömien sijainti mahdollisimman tarkasti. Avoimia työpaikkoja tilastoidaan Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkalla aluetasolla. Työttömiä tilastoidaan niin ikään Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. TEM tarjoaa tarkimmillaan kunnittaisia tietoja, Tilastokeskus postinumeroalueittain. Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se on saatavilla tällä hetkellä vuodelle 2013 (kuvaa vuoden lopun tietoa).
+</p>
+<p>
+Avointen työpaikkojen sijainnin selvittämiksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja niiden postinumeron. Tekninen toteus on tehty R- ja (postgre-)SQL-kielillä. Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen rajapinnasta QGIS:n avulla ja käännetty shape-muotoon R:ää varten. Työpaikkojen tiedot on poimittu "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti. RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, jonka – yhdisttynä geneeriseen urliin – avulla saa palvelusta esiin ko. työpaikan ominaisuustiedot sisältävän sivun, josta poimin yksittäisen työpaikan tiedot ns. web scraping -tekniikalla. 
+<p>
+Koska avoimet työpaikat keskittyvät tietyille postinumeroalueille, yksittäisten postinumeroalueiden työpaikkojen määriä kuvaava kartta ei ole kovin informatiivinen. Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta, ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain, vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain. Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa. Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
+</p>
+<p>
+Ei ole yllätys, että avoimet työpaikat keskittyvät kaupunkeihin, sillä suhteuttamattomat luvut heijastelevat tietysti alueella asuvan väestön määrää. Tampereen ja pääkaupunkiseudun alueilla on työpaikkakeskittymä, jossa työpaikkoja on auki yli seitsemänsataa. Tosin PK-seutu kilpailee omassa luokassaan yli 3000:lla avoimella työpaikalla. 
+</p>
+<h3>Kuvio 1. Avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h3>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva1.jpeg" 
+style="width: 50%; height: 50%" title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
+
+<p>
+
+Jos Etelä-Suomea katsoo tarkemmin, näyttää siltä, että alueet kehittyvät raideliikennemahdollisuuksien mukaan. Pääkaupunkiseutu ja Lahden seutu näyttävät kasvavan kiinni toisiina ja Turun ja Tampereen suuntaan kulkevat väylät voi erottaa kartasta. 
+</p>
+<h3>Kuvio 2.  Etelä-Suomen avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h3>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva2.jpeg"
+style="width: 50%; height: 50%"  title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
 
                 <hr>
 
