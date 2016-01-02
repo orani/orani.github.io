@@ -31,6 +31,7 @@ div#footer{clear:left;width:100%}
   line-height: 1.4;
 }
 .navbar {
+  background-color:grey;
   position: fixed;
   min-height: 50px;
   margin-bottom: 20px;
