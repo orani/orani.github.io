@@ -10,7 +10,7 @@ div#header{background-color:grey;
 }
 div#header h1{height:80px;line-height:80px;margin:0;padding-left:10px;}
 div#container{text-align:left}
-div#content p{line-height:1.4}
+div#content p{line-height:1.4 text-align: justify;}
 div#navigation{background:#F6F0E0;}
 div#navigation ul{margin:15px 0; padding:0; list-style-type:none;}
 div#navigation li{margin-bottom:5px;}
@@ -34,6 +34,7 @@ div#footer{clear:left;width:100%}
   background-color:black;
   width:100%;
   color:white;
+   text-align: left;
   position: fixed;
   min-height: 50px;
   margin-bottom: 20px;
