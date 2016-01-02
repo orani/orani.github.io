@@ -23,6 +23,7 @@ div#content{margin: 20 150px}
 div#navigation{float:left;width:150px;margin-left:-700px}
 div#extra{float:left;width:150px;margin-left:-150px}
 div#footer{clear:left;width:100%}
+.p {  text-align: justify;  }
 .lead {
   margin-bottom: 20px;
   margin-top:150px;
