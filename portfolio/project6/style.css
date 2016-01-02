@@ -24,7 +24,19 @@ div#footer{clear:left;width:100%}
   font-weight: 300;
   line-height: 1.4;
 }
-
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 /*
  * FancyBox - jQuery Plugin
  * Simple and fancy lightbox alternative
