@@ -18,7 +18,12 @@ div#content{margin: 0 150px}
 div#navigation{float:left;width:150px;margin-left:-700px}
 div#extra{float:left;width:150px;margin-left:-150px}
 div#footer{clear:left;width:100%}
-
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
 
 /*
  * FancyBox - jQuery Plugin
