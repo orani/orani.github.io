@@ -10,12 +10,23 @@
 <div id="header"><h1><a href="http://www.free-css.com/free-css-layouts.php">Free CSS Layouts</a></h1></div>
   <div id="wrapper">
     <div id="content">
-      <p><strong>Content here.</strong></p>
-      <p>Sapibulumnibh phasellus nulla egestibulum enim pretium elit tincidunt estiquam ultrisque donectetur. Sedcondimentumsan odio hendrerit proin vitae dignis nibh ac justo id congue. Amesintesque vel curabitae volutpat donec alique nasceleifendimentesque montesque rhoncus quis eros. Vestnunc nonummy</p>
-      <p>Montegeraliquam sed pede in cursus praesenec vestas rhoncus wisi at wisi. Condisseloborttis enim et ipsum mauristie id felit adipiscipit ac auctortorttitor sempor. Vitantesqueat sempus non sed et mus sit vivamus purus netus hendiment. Pretiuma diam et id tempus dolor por wisi sed volutpat facilisi.</p>
-      <p>Wisiet sus adipit phasellentum elit condissim consecteturpiscing sapien vivamus et congue. Utvel tris quismod cursus liberos elit nisse curabitur tur parturpis tellenterdum. Semperligula curabitae tellentesque nulla trices vestas ristibulum id justo auctor facinia. Natisdonec consequat nibh pellus.</p>
-      <p>Vestibusodio euisque id elerisus lacus tincidunt sit malesuada lacus pellus parturpiscing. Pellenterdumat maecenatoque cras a magna nibh et quis diam ames et. Laoremvolutpat ac dolor eget eget temper lacus vestibus velit lacus venean. Magnaipsum tellus morbi leo aliquat nulla convallis pellentesque.</p>
-    </div>
+      <p><strong>Hakisin, mut se on Helsingissä</strong></p>
+<p>Työttömyydestä keskusteltaessa vertaillaan työttömien ja avointen työpaikkojen määriä ja ihmetellään, miten samanaikaisesti voi olla avoimia työpaikkoja ja työttömiä. Kyse on tietysti siitä, ettei työpaikan ominaisuudetvaatimukset ja/tai työntekijän ominaisuudet/vaatimukset kohtaa. Yksi tällainen ns. kohtaanto-ongelma  syntyy, mikäli työpaikka sijaitsee kaukana työttömän henkilön kodista. Työtön henkilö on nykyisellään velvoitettu ottamaan vastaan työvoimahallinnon tarjoaman työpaikan mikäli se sijaitsee 80 kilometrin päässä. 
+<p>
+Jotta voitaisiin laskea, kuinka kaukana avoimet työpaikat sijaitsevat työttömistä – eli selvittää alueellisen kohtaanto-ongelman laajuus – pitäisi kuitenkin tietää työpaikan ja työttömien sijainti mahdollisimman tarkasti. Avoimia työpaikkoja tilastoidaan Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkalla aluetasolla. Työttömiä tilastoidaan niin ikään Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. TEM tarjoaa tarkimmillaan kunnittaisia tietoja, Tilastokeskus postinumeroalueittain. Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se on saatavilla tällä hetkellä vuodelle 2013 (kuvaa vuoden lopun tietoa).
+</p>
+Avointen työpaikkojen sijainnin selvittämiksi poimin kaikille tutusta mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja niiden postinumeron. Tekninen toteus on tehty R- ja (postgre-)SQL-kielillä. Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen rajapinnasta QGIS:n avulla ja käännetty shape-muotoon R:ää varten. Työpaikkojen tiedot on poimittu "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti. RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, jonka – yhdisttynä geneeriseen urliin – avulla saa palvelusta esiin ko. työpaikan ominaisuustiedot sisältävän sivun, josta poimin yksittäisen työpaikan tiedot ns. web scraping -tekniikalla. 
+
+Koska avoimet työpaikat keskittyvät tietyille postinumeroalueille, yksittäisten postinumeroalueiden työpaikkojen määriä kuvaava kartta ei ole kovin informatiivinen. Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta, ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain, vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain. Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa. Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
+
+Ei ole yllätys, että avoimet työpaikat keskittyvät kaupunkeihin, sillä suhteuttamattomat luvut heijastelevat tietysti alueella asuvan väestön määrää. Tampereen ja pääkaupunkiseudun alueilla on työpaikkakeskittymä, jossa työpaikkoja on auki yli seitsemänsataa. Tosin PK-seutu kilpailee omassa luokassaan yli 3000:lla avoimella työpaikalla. 
+
+
+Jos Etelä-Suomea katsoo tarkemmin, näyttää siltä, että alueet kehittyvät raideliikennemahdollisuuksien mukaan. Pääkaupunkiseutu ja Lahden seutu näyttävät kasvavan kiinni toisiina ja Turun ja Tampereen suuntaan kulkevat väylät voi erottaa kartasta. 
+
+
+      
+      </div>
   </div>
   <div id="navigation">
     <p><strong>Navigation Here</strong></p>
