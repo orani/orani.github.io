@@ -30,7 +30,7 @@ div#footer{clear:left;width:100%}
   line-height: 1.4;
 }
 .navbar {
-  position: relative;
+  position: fixed;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
