@@ -5,9 +5,7 @@ a{padding:5px; text-decoration:none; color:#000000;}
 div#header{background-color:#F3F2ED;
 	
 	  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
+
 	
 }
 div#header h1{height:80px;line-height:80px;margin:0;padding-left:10px;}
