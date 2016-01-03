@@ -40,13 +40,19 @@ Jotta voitaisiin laskea, kuinka kaukana avoimet työpaikat sijaitsevat työttöm
 Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkalla aluetasolla. Työttömiä tilastoidaan niin ikään Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. TEM tarjoaa tarkimmillaan kunnittaisia tietoja, Tilastokeskus postinumeroalueittain. Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se on saatavilla tällä hetkellä vuodelle 2013 (kuvaa vuoden lopun tietoa).
 </p>
 <p>
-Avointen työpaikkojen sijainnin selvittämiksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
+Avointen työpaikkojen sijainnin selvittämiseksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
 niiden postinumeron. Tekninen toteus on tehty R- ja (postgre-)SQL-kielillä. 
 Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen rajapinnasta QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
 Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. 
 Työpaikkojen tiedot poimin "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
 että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti.
 RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, jonka – yhdistettynä geneeriseen urliin – avulla saa palvelusta esiin ko. työpaikan ominaisuustiedot sisältävän sivun, josta poimin yksittäisen työpaikan tiedot ns. <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping -tekniikalla.</a> 
+<p>Työttömien määrä on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
+viiteajankohta heittää noin kuukaudella -- tässä mielessä sijainnin vertailu on vähän hassua. Toisaalta, työttömien määrissä olevat
+alueelliset erot eivät todennäköisesti muutu kuukaudessa kovin radikaalisti, joten luvut ovat vähintäänkin suuntaa-antavia. Palvelusta
+on saatavilla ainoastaan työttömien lukumäärä kunnittain, joten etäisyyslaskennoissa on tyydyttävä siihen. Kunnan keskipiste on siinä
+mielessä hyvä ratkaisu, että kuntien keskustaan keskittyy yleensä suurin osa asutuksesta ja siten työttömistäkin. Tässä mielessä kunnan
+keskipiste toimii hyvänä korvikkeena todelliselle sijaintitiedolle (jota ei tietenkään ole julkisesti saatavilla).</p>
 <p>
 Koska avoimet työpaikat keskittyvät tietyille postinumeroalueille, yksittäisten postinumeroalueiden työpaikkojen määriä kuvaava kartta ei ole kovin informatiivinen. Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta, ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain, vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain. Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa. Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
 </p>
