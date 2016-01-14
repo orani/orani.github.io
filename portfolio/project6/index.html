@@ -48,11 +48,17 @@ Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se
 
 <p>
 Avointen työpaikkojen sijainnin selvittämiseksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
-niiden postinumeron. 
+niiden postinumeron. Tietojen haku perustuu ns. <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping -tekniikkaan</a>,
+jossa ideana on kerätä informaatiota nettisivuilta massoittain. </p>
+
+<p>
 Työpaikkojen tiedot poimin "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
 että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti.
-RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, jonka – yhdistettynä geneeriseen urliin – avulla saa palvelusta esiin ko. työpaikan ominaisuustiedot sisältävän sivun, josta poimin yksittäisen työpaikan tiedot ns. <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping -tekniikalla.</a>
-<p>Toteutus on tehty pääosin <a href='https://www.r-project.org/'>R-ohjelmointikielellä</a>, mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä.
+RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, joka yhdistettynä geneeriseen urliin muodostaa linkin ko. työpaikan 
+ominaisuustiedot sisältävälle sivulle. Tämän jälkeen ei tarvinnut kuin loopata ko. linkit läpi, lukea HTML:t sisään ja parsia niistä
+esiin tarvittava tieto eli käytännössä sijaintitiedot. </p>
+<p>Toteutus on tehty pääosin <a href='https://www.r-project.org/'>R-ohjelmointikielellä</a>,
+mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä.
 Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen <a href='http://www.stat.fi/tup/rajapintapalvelut/index.html'>rajapinnasta</a> QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
 Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. </p>
 
