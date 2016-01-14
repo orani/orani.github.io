@@ -62,13 +62,13 @@ Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen <a href='http://
 Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. </p>
 
 <p>Työttömien osalta jouduin tyytymään karkeampaan aluejakoon: postinumeroaluettainen data on vuodenvaihteesta 2013/2014, joten se ei ehkä 
-kuvaa oikein nykyistä tilannetta. <p> Työttömien määrä on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
+kuvaa oikein nykyistä tilannetta. Työttömien määrä kunnittain on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
 viiteajankohta heittää noin kuukaudella -- tässä mielessä sijaintitietojen vertailu on vähän hassua. Toisaalta, työttömien määrissä olevat
 alueelliset erot eivät todennäköisesti muutu kuukaudessa kovin radikaalisti, joten luvut ovat vähintäänkin suuntaa-antavia. Palvelusta
 on saatavilla ainoastaan työttömien lukumäärä kunnittain, joten etäisyyslaskennoissa on tyydyttävä siihen.</p>
 
-<p>Etäisyyden voi laskea vaikka kunnan rajoista tai keskipisteestä. Itse päädyin jälkimmäiseen. 
-Eli työttömien sijainnilla tarkoitetaan tässä työttömien asuinkuntaan. Kaikkien helsinkiläisten sijainti on siis Helsingin keskipiste.
+<p>Etäisyyden voisi laskea hyödyntäen kuntien/postinumeroalueiden rajoja tai keskipisteitä. Itse päädyin jälkimmäiseen eli työttömien sijainnilla tarkoitetaan tässä työttömien asuinkunnan.
+keskipistettä ja tietyn postinumeroalueen työpaikkojen sijainti on ko. postinumeroalueen keskipiste.
 Keskipiste on siinä mielessä hyvä ratkaisu, että kuntien keskustaan keskittyy yleensä suurin osa asutuksesta ja siten työttömistäkin. Tässä mielessä kunnan
 keskipiste toimii hyvänä korvikkeena todelliselle sijaintitiedolle.</p>
 <h3>Missä työpaikat sijaisevat?</h3>
@@ -97,7 +97,8 @@ Jos Etelä-Suomea katsoo tarkemmin, näyttää siltä, että avoimet työpaikat 
 style="width: 50%; height: 50%"  title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
 <br>
 <br>
-<p>Entä miten työttömät sijoittuvat suhteessa avoimiin työpaikkoihin? Eniten työttömiä on tietysti kaupungeissa samaan tapaan kuin työpaikkojakin. TEM:n mukaan työttömänä oli marraskuun (2015) lopussa
+<h3>Entä miten työttömät sijoittuvat suhteessa avoimiin työpaikkoihin?</h3>
+<p> Eniten työttömiä on tietysti kaupungeissa samaan tapaan kuin työpaikkojakin. TEM:n mukaan työttömänä oli marraskuun (2015) lopussa
 342 106	henkilöä, joista 114 372 oli pitkäaikaistyöttömiä.  Kuviossa 3 on kuvattu kuntien työttömien määrää ja 30km säteellä olevien avointen työpaikkojen määrää kaikissa kunnissa 
 ja erikseen pienimmissä. Kuviosta nähdään, että parhaimmassa asemassa ovat ns. kehyskunnat, jotka sijaitsevat kohtuullisella etäisyydellä
 keskuskunnista. Työpaikkojen saavutettavuus on kehyskunnissa hyvä, mutta työttömiä ei ole juurikaan. Työttömät keskittyvät työssäkäyntialueiden
