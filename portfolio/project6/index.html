@@ -38,6 +38,7 @@ Työtön henkilö on nykyisellään velvoitettu ottamaan vastaan työvoimahallin
 avoimia työpaikkoja tilastoidaan, muttei maasta silti (tietääkseni?) löydy lukuja siitä, kuinka kaukana avoimet työpaikat ja työttömät
 ovat toisistaan.
 </p>
+<h3>Miten?</h3>
 <p>
 Jotta voitaisiin laskea, kuinka kaukana avoimet työpaikat sijaitsevat työttömistä – eli selvittää alueellisen kohtaanto-ongelman laajuus – pitäisi kuitenkin tietää työpaikan ja työttömien sijainti mahdollisimman tarkasti. Avoimia työpaikkoja tilastoidaan Tilastokeskuksen ja Työ- ja elinkeinoministeriön (TEM) toimesta. 
 Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkalla aluetasolla. 
@@ -49,10 +50,8 @@ Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se
 <p>
 Avointen työpaikkojen sijainnin selvittämiseksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
 niiden postinumeron. Tietojen haku perustuu ns. <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping -tekniikkaan</a>,
-jossa ideana on kerätä informaatiota nettisivuilta massoittain. </p>
-
-<p>
-Työpaikkojen tiedot poimin "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
+jossa ideana on kerätä informaatiota nettisivuilta massoittain.
+Työpaikkojen tiedot poimin siis "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
 että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti.
 RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, joka yhdistettynä geneeriseen urliin muodostaa linkin ko. työpaikan 
 ominaisuustiedot sisältävälle sivulle. Tämän jälkeen ei tarvinnut kuin loopata ko. linkit läpi, lukea HTML:t sisään ja parsia niistä
@@ -62,23 +61,29 @@ mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä.
 Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen <a href='http://www.stat.fi/tup/rajapintapalvelut/index.html'>rajapinnasta</a> QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
 Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. </p>
 
-<p>Mikään edellä mainituista tilastoista ei tietenkään julkaise työttömien sijaintia sellaisenaan, vaan tilastot on laadittu hallinnollisten rajojen perusteella. Etäisyyksien
-laskemisen edellytys ei kuitenkaan ole tarkka sijainti, vaan etäisyys voidaan laskea vaikka kunnan rajoista tai keskipisteestä. Itse päädyin jälkimmäiseen. 
-Eli työttömien sijainnilla tarkoitetaan tässä työttömien asuinkuntaan. Kaikkien helsinkiläisten sijainti on siis Helsingin keskipiste.
-Keskipiste on siinä mielessä hyvä ratkaisu, että kuntien keskustaan keskittyy yleensä suurin osa asutuksesta ja siten työttömistäkin. Tässä mielessä kunnan
-keskipiste toimii hyvänä korvikkeena todelliselle sijaintitiedolle.</p>
-<p> Työttömien määrä on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
+<p>Työttömien osalta jouduin tyytymään karkeampaan aluejakoon: postinumeroaluettainen data on vuodenvaihteesta 2013/2014, joten se ei ehkä 
+kuvaa oikein nykyistä tilannetta. <p> Työttömien määrä on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
 viiteajankohta heittää noin kuukaudella -- tässä mielessä sijaintitietojen vertailu on vähän hassua. Toisaalta, työttömien määrissä olevat
 alueelliset erot eivät todennäköisesti muutu kuukaudessa kovin radikaalisti, joten luvut ovat vähintäänkin suuntaa-antavia. Palvelusta
 on saatavilla ainoastaan työttömien lukumäärä kunnittain, joten etäisyyslaskennoissa on tyydyttävä siihen.</p>
+
+<p>Etäisyyden voi laskea vaikka kunnan rajoista tai keskipisteestä. Itse päädyin jälkimmäiseen. 
+Eli työttömien sijainnilla tarkoitetaan tässä työttömien asuinkuntaan. Kaikkien helsinkiläisten sijainti on siis Helsingin keskipiste.
+Keskipiste on siinä mielessä hyvä ratkaisu, että kuntien keskustaan keskittyy yleensä suurin osa asutuksesta ja siten työttömistäkin. Tässä mielessä kunnan
+keskipiste toimii hyvänä korvikkeena todelliselle sijaintitiedolle.</p>
+<h3>Missä työpaikat sijaisevat?</h3>
 <p>
-Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta, ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain (tällainen kartta ei ole kovin informatiivinen), vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain. Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa. Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
+Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta,
+ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain (tällainen kartta ei ole kovin informatiivinen), 
+vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain.
+Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa.
+Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
 </p>
 <p>
 Ei ole yllätys, että avoimet työpaikat keskittyvät kaupunkeihin, sillä suhteuttamattomat luvut heijastelevat tietysti alueella asuvan väestön määrää. Tampereen ja pääkaupunkiseudun alueilla on työpaikkakeskittymä, jossa työpaikkoja on auki yli seitsemänsataa. Tosin PK-seutu kilpailee omassa luokassaan yli 3000:lla avoimella työpaikalla. 
 </p>
 <br>
-<h3>Kuvio 1. Avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h3>
+<h4>Kuvio 1. Avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h4>
 <img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva1.jpeg" 
 style="width: 50%; height: 50%" title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
 
@@ -87,7 +92,7 @@ style="width: 50%; height: 50%" title="Avoimet työpaikat alueittain (kaikki ty�
 Jos Etelä-Suomea katsoo tarkemmin, näyttää siltä, että avoimet työpaikat jakautuvat raiteita mukaillen. Pääkaupunkiseutu ja Lahden seutu näyttävät kasvavan kiinni toisiina ja Turun ja Tampereen suuntaan kulkevat väylät voi erottaa kartasta. 
 </p>
 <br>
-<h3>Kuvio 2.  Etelä-Suomen avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h3>
+<h4>Kuvio 2.  Etelä-Suomen avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h4>
 <img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva2.jpeg"
 style="width: 50%; height: 50%"  title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
 <br>
@@ -99,7 +104,7 @@ keskuskunnista. Työpaikkojen saavutettavuus on kehyskunnissa hyvä, mutta työt
 keskuksiin. Hyvä esimerkki tästä on Tampere, joka nojaa työpaikkatarjonnassaan itseensä. Tampereella onkin enemmän työttömiä kuin Espoossa tai Vantaalla ja
 vähemmän tavoitettavissa olevia avoimia työpaikkoja kuin Espoossa ja Vantaalla. Sama suhde on toisaalta myös Lempäälän ja Tampereen välillä: Tampereella on työpaikat ja työttömät, Lempäällä vain työpaikat. </p>
 <br>
-<h3>Kuvio 3. 30km säteellä olevat avoimet työpaikat ja työttömien määrä kunnittain (11/2015)</h3>
+<h4>Kuvio 3. 30km säteellä olevat avoimet työpaikat ja työttömien määrä kunnittain (11/2015)</h4>
 <img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva4.png"
 style="width: 50%; height: 50%"  title="30km säteellä olevien avointen työpaikkojen määrä ja työttömien määrä (11/2015)"/>
 <br>
@@ -113,7 +118,7 @@ Hieman yllättäen pitkäaikaistyöttömät asuivat lähempänä avoimia työpai
 työttömyyden ja työpaikkojen keskittyminen kaupunkeihin.Pitkäaikaistyöttömistä 79 prosentilla oli vähintään 100 työpaikkaa 30km säteellä
 ja noin 42 prosentilla vähintään 500 työpaikkaa 50km säteellä.</p>
 <br>
-<h3>Kuvio 4. Työttömien kumulatiivinen osuus työpaikkojen (30/50/80km säteellä) ja työttömyyden keston mukaan</h3>
+<h4>Kuvio 4. Työttömien kumulatiivinen osuus työpaikkojen (30/50/80km säteellä) ja työttömyyden keston mukaan</h4>
 <img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva5.png"
 style="width: 50%; height: 50%"  title="Työttömien kumulatiivinen osuus työpaikkojen (30/50/80km säteellä) ja työttömyyden keston mukaan"/>
 <br>
