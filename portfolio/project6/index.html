@@ -31,7 +31,7 @@
       
 <p class="lead">
        
-     <h1 id="header">Voiko avoimen datan pohjalta arvioida avointen työpaikkojan ja työttömyyden alueellista kohtaantoa?</h1>
+     <h1 id="header">Kuinka kaukana on lähin työpaikka?</h1><h2>Avointen työpaikkojen ja työttömien alueellinen etäisyyden arviointa avoimen datan perusteella</h2>
     <p>
 Työttömyydestä keskusteltaessa vertaillaan työttömien ja avointen työpaikkojen määriä ja ihmetellään, miten samanaikaisesti voi olla avoimia työpaikkoja ja työttömiä. Kyse on tietysti siitä, ettei työpaikan ominaisuudetvaatimukset ja/tai työntekijän ominaisuudet/vaatimukset kohtaa. Yksi tällainen ns. kohtaanto-ongelma  syntyy, mikäli työpaikka sijaitsee kaukana työttömän henkilön kodista. Työtön henkilö on nykyisellään velvoitettu ottamaan vastaan työvoimahallinnon tarjoaman työpaikan mikäli se sijaitsee 80 kilometrin päässä. 
 </p>
@@ -41,8 +41,8 @@ Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkal
 </p>
 <p>
 Avointen työpaikkojen sijainnin selvittämiseksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
-niiden postinumeron. Toteutus on tehty pääosin R-ohjelmointikielellä, mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä ja tietokantaratkaisua
-Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen rajapinnasta QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
+niiden postinumeron. Toteutus on tehty pääosin <a href='https://www.r-project.org/'>R-ohjelmointikielellä</a>, mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä.
+Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen <a href='http://www.stat.fi/tup/rajapintapalvelut/index.html'>rajapinnasta</a> QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
 Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. 
 Työpaikkojen tiedot poimin "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
 että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti.
