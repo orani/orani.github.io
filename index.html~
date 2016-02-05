@@ -20,8 +20,8 @@ title: Home Page
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Oikea data + pureva näkökulma + oivaltava tulkinta</h2>
                     <hr class="light">
-                    <p class="text-faded">Olemme yhteiskuntatieteilijöiden kolmiosainen veljeksikkö, joiden tavoitteena on tuottaa suomalaisen julkishallinnon päätäntään ja yleisen keskustelun piiriin yhteiskuntapoliittisia oivalluksia valituista teemoista. Vuosien 2014 ja 2015 aikana Topias ja Jussi Pyykkönen ovat julkaisseet avauksia työllisyyden kitemiseen Suomessa. Voit tutustua projekteihimme näillä sivuilla.</p>
-                    <a href="#portfolio" class="btn btn-default btn-xl">Tutustu tästä projekteihin</a>
+                    <p class="text-faded">Edustamme kolmen yhteiskuntatieteellisesti latautuneen veljen solmukohtaa, joiden tavoitteena on tuottaa suomalaisen julkishallinnon päätäntään ja yleisen keskustelun piiriin yhteiskuntapoliittisia oivalluksia valituista teemoista. Vuodesta 2014 Topias ja Jussi Pyykkönen ovat julkaisseet avauksia työttömyyden kitemiseen Suomessa.</p>
+                    <a href="#portfolio" class="btn btn-default btn-xl">Tutustu projekteihin</a>
                 </div>
             </div>
         </div>
