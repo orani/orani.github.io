@@ -53,7 +53,7 @@
                              spanGaps: false,
                              },
                              {
-                             label: "NA",
+                             label: "Trendi",
                              fill: false,
                              lineTension: 0.1,
                              backgroundColor: "rgb(200, 50, 0)",
@@ -75,7 +75,7 @@
                              spanGaps: false,
                              },
                               {
-                                label: "NA",
+                                label: "Koko maa",
                                 fill: false,
                                 lineTension: 0.1,
                                 backgroundColor: "rgb(0, 0, 200)",
@@ -97,7 +97,7 @@
                                 spanGaps: false,
                                 },
                                   {
-                                   label: "NA",
+                                   label: "Trendi, koko maa",
                                     fill: false,
                                     lineTension: 0.1,
                                     backgroundColor: "rgb(0, 50, 200)",
@@ -277,87 +277,23 @@ var myRadarChart = new Chart(ctx, {
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <strong>Email: </strong>info@yourdomain.com
-                    &nbsp;&nbsp;
-                    <strong>Support: </strong>+90-897-678-44
-                </div>
-
-            </div>
-        </div>
+      
     </header>
     <!-- HEADER END-->
-    <div class="navbar navbar-inverse set-radius-zero" style="display: none;">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-
-                    <img src="assets/img/logo.png" />
-                </a>
-
-            </div>
-
-            <div class="left-div">
-                <div class="user-settings-wrapper">
-                    <ul class="nav">
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-settings">
-                                <div class="media">
-                                    <a class="media-left" href="#">
-                                        <img src="assets/img/64-64.jpg" alt="" class="img-rounded" />
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Jhon Deo Alex </h4>
-                                        <h5>Developer & Designer</h5>
-
-                                    </div>
-                                </div>
-                                <hr />
-                                <h5><strong>Personal Bio : </strong></h5>
-                                Anim pariatur cliche reprehen derit.
-                                <hr />
-                                <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
-
-                            </div>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- LOGO HEADER END-->
     <section class="menu-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
-                        <!---
-						<ul id="menu-top" class="nav navbar-nav navbar-right">
-                                                    <li><a class="menu-top-active" href="out_tyomarkkina.html">Työmarkkinatilanne</a></li>
-							<li><a href="out_vaestonmuutos.html">Väestönmuutokset</a></li>
-                            
-
-                        </ul>
-						--->
 						<div class="btn-group">
 											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Taloustilanne<span class="caret"></span></button>
 											  <ul class="dropdown-menu">
 <li><a href="out_talous_SSS.html">Koko maa</a></li><li><a href="out_talous_091.html">Helsinki - Helsingfors</a></li><li><a href="out_talous_092.html">Vantaa - Vanda</a></li><li><a href="out_talous_049.html">Espoo - Esbo</a></li><li><a href="out_talous_905.html">Vaasa - Vasa</a></li><li><a href="out_talous_698.html">Rovaniemi</a></li>
 												
 											  </ul>
+											  </div>
 						<div class="btn-group">
 											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Työmarkkinatilanne<span class="caret"></span></button>
 											  <ul class="dropdown-menu">
@@ -410,7 +346,7 @@ var myRadarChart = new Chart(ctx, {
                             Muutos edelliseen kuukauteen
                         </div>
                         <div class="lukupaneeli">
-                            <p style="color: darkred;" id="TM-luku-2">+0.4 %</p>
+                            <p style="color: rgba(228,26,28)" id="TM-luku-2">+0.4 %</p>
                         </div>
                         <div class="panel-footer">
                             
@@ -627,16 +563,10 @@ var myRadarChart = new Chart(ctx, {
 
         </div>
     </div>
+	</section>
     <!-- CONTENT-WRAPPER SECTION END-->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    &copy; 2015 YourCompany | By : <a href="http://www.designbootstrap.com/" target="_blank">DesignBootstrap</a>
-                </div>
-
-            </div>
-        </div>
+      
     </footer>
     <!-- FOOTER SECTION END-->
     <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
