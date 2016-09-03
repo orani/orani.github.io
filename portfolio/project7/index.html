@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Kuntaraportti</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js'></script>
+	 
+	
+	  <script type="text/javascript" id="kuvaSkriptiBlokki"> window.onload = function () {
+	<!--kuvablokki --> 
+                             var ctx = document.getElementById("TM-kuva-1");
+                             var data = {
+                             labels:["2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-05","2010-06","2010-07","2010-08","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+                             datasets: [
+                             {
+                             label: "Koko maa",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgba(75,192,192,0.4)",
+                             borderColor: "rgba(75,192,192,1)",
+                             borderCapStyle: "butt",
+                             borderDash: [],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgba(75,192,192,1)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [10.9,10.5,10,9.6,9.1,10.1,10.6,9.4,8.8,8.8,8.8,9.6,9.5,9.1,8.6,8.3,7.9,8.8,9.3,8.2,7.7,7.7,7.7,8.6,8.5,8.1,7.7,7.5,7.2,8.1,8.6,7.6,7.3,7.5,7.8,9.2,9.5,9.6,9.7,9.7,9.4,10.6,11.2,10.4,10.2,10.4,10.6,11.7,11.3,10.9,10.5,10,9.7,10.5,11,9.7,9.2,9.2,9.3,10.3,10.3,10,9.6,9.2,8.8,9.8,10.3,9.1,8.6,8.7,8.9,9.9,10,9.8,9.5,9.2,8.8,10,10.6,9.5,9.3,9.6,9.9,10.9,11.2,11.1,11,10.7,10.3,11.6,12.2,11.1,10.9,11.1,11.3,12.6,12.5,12.4,12,11.7,11.5,12.9,13.4,12.2,12,12.2,12.5,13.9,13.7,13.5,13.2,12.9,12.5,14,14.5,13.2,12.8,12.8,13,14.4,14,13.7,13.3,12.9,12.6,13.9,14.4], 
+                             spanGaps: false,
+                             },
+                            {
+                             label: "Trendi",
+                              fill: false,
+                              lineTension: 0.1,
+                              backgroundColor: "rgba(75,192,192,0.4)",
+                              borderColor: "red",
+                              borderCapStyle: "butt",
+                              borderDash: [],
+                              borderDashOffset: 0.0,
+                              borderJoinStyle: "miter",
+                              pointBorderColor: "rgba(75,192,192,1)",
+                              pointBackgroundColor: "#fff",
+                              pointBorderWidth: 1,
+                              pointHoverRadius: 5,
+                              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                              pointHoverBorderColor: "rgba(220,220,220,1)",
+                              pointHoverBorderWidth: 2,
+                              pointRadius: 1,
+                              pointHitRadius: 10,
+                              data: [10.28,10.18,10.09,9.97,9.85,9.73,9.61,9.51,9.4,9.29,9.18,9.04,8.94,8.85,8.74,8.65,8.56,8.47,8.4,8.33,8.24,8.15,8.06,7.98,7.9,7.8,7.73,7.72,7.76,7.82,7.86,7.89,7.98,8.12,8.33,8.63,8.94,9.25,9.58,9.85,10.04,10.2,10.4,10.64,10.84,10.95,10.98,10.88,10.7,10.6,10.51,10.39,10.3,10.22,10.12,10.01,9.9,9.79,9.69,9.65,9.64,9.6,9.52,9.49,9.47,9.42,9.4,9.36,9.3,9.28,9.3,9.32,9.37,9.4,9.43,9.48,9.54,9.66,9.77,9.85,9.99,10.15,10.29,10.43,10.55,10.69,10.89,11.01,11.09,11.19,11.32,11.46,11.58,11.65,11.72,11.81,11.91,12.01,12.04,12.14,12.32,12.41,12.47,12.57,12.69,12.81,12.92,13.01,13.09,13.16,13.26,13.33,13.34,13.39,13.43,13.43,13.43,13.5,13.62,13.63,13.56,13.5,13.45,13.39,13.34,13.23,13.13], 
+                              spanGaps: false,
+                              }
+                             ]
+                             };
+                             var myLineChart = new Chart(ctx, {
+                             type: "line",
+                             data: data
+                             });
+                             <!--kuvablokki -->
+                              
+                             var ctx = document.getElementById("TM-kuva-2");
+                             var data = {
+                             labels:["2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-05","2010-06","2010-07","2010-08","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+                             datasets: [
+                             {
+                             label: "Vuosimuutos",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgba(75,192,192,0.4)",
+                             borderColor: "rgba(75,192,192,1)",
+                             borderCapStyle: "butt",
+                             borderDash: [],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgba(75,192,192,1)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [,,,,,,,,,,,,-36933,-36427,-36117,-34283,-32800,-33036,-33018,-32032,-28775,-28433,-27062,-26752,-24885,-23870,-21120,-20617,-17399,-16660,-17713,-14441,-10463,-5201,2762,15294,28654,40476,51474,59260,59775,66199,69882,73822,77019,76885,73156,66370,49686,36642,23477,11733,8712,-24,-2065,-14541,-23304,-27629,-30263,-32340,-28897,-26428,-25711,-24561,-25418,-22095,-21882,-18298,-16624,-14314,-12975,-14032,-7830,-5114,-1452,1602,2654,6524,9305,10937,17415,23759,26783,26707,34206,37094,40873,40233,39705,42651,42846,44310,43552,39485,39154,47725,35079,32923,28719,27899,33198,35480,31840,29188,29615,30298,30593,33369,32048,31567,31318,31272,27359,31691,31170,27281,22856,17806,15600,14658,8504,5612,3993,2356,2541,-2808,-3197], 
+                             spanGaps: false,
+                             },
+                            {
+                             label: "Kuukausimuutos",
+                              fill: false,
+                              lineTension: 0.1,
+                              backgroundColor: "rgba(75,192,192,0.4)",
+                              borderColor: "red",
+                              borderCapStyle: "butt",
+                              borderDash: [],
+                              borderDashOffset: 0.0,
+                              borderJoinStyle: "miter",
+                              pointBorderColor: "rgba(75,192,192,1)",
+                              pointBackgroundColor: "#fff",
+                              pointBorderWidth: 1,
+                              pointHoverRadius: 5,
+                              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                              pointHoverBorderColor: "rgba(220,220,220,1)",
+                              pointHoverBorderWidth: 2,
+                              pointRadius: 1,
+                              pointHitRadius: 10,
+                              data: [,-9989,-12970,-9480,-12231,24348,13067,-30743,-14375,-1094,-661,22569,-5374,-9483,-12660,-7646,-10748,24112,13085,-29757,-11118,-752,710,22879,-3507,-8468,-9910,-7143,-7530,24851,12032,-26485,-7140,4510,8673,35411,9853,3354,1088,643,-7015,31275,15715,-22545,-3943,4376,4944,28625,-6831,-9690,-12077,-11101,-10036,22539,13674,-35021,-12706,51,2310,26548,-3388,-7221,-11360,-9951,-10893,25862,13887,-31437,-11032,2361,3649,25491,2814,-4505,-7698,-6897,-9841,29732,16668,-29805,-4554,8705,6673,25415,10313,-1617,-3919,-7537,-10369,32678,16863,-28341,-5312,4638,6342,33986,-2333,-3773,-8123,-8357,-5070,34960,13223,-30993,-4885,5321,6637,36762,-3654,-4254,-8372,-8403,-8983,39292,12702,-34882,-9310,271,4431,35820,-9808,-7146,-9991,-10040,-8798,33943,12313], 
+                              spanGaps: false,
+                              }
+                             ]
+                             };
+                             var myLineChart = new Chart(ctx, {
+                             type: "line",
+                             data: data
+                             });
+                             <!--kuvablokki -->
+                              
+                             var ctx = document.getElementById("TM-kuva-3");
+                             var data = {
+                             labels:["2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-05","2010-06","2010-07","2010-08","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+                             datasets: [
+                             {
+                             label: "Vuosimuutos",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgba(75,192,192,0.4)",
+                             borderColor: "rgba(75,192,192,1)",
+                             borderCapStyle: "butt",
+                             borderDash: [],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgba(75,192,192,1)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [,,,,,,,,,,,,-13334,-13691,-13344,-13193,-12797,-13013,-13233,-13003,-12227,-11894,-11362,-11279,-10670,-9638,-9220,-8942,-9213,-8770,-8631,-8847,-7673,-7311,-7487,-6087,-6550,-6443,-5969,-5188,-4002,-3309,-2698,-830,311,2262,4959,5970,8999,10468,11771,12475,13361,14268,15493,15276,14336,13463,11980,10722,9290,7737,6351,5366,4169,2849,1850,1142,320,-317,-335,-926,-871,1107,1298,2509,4315,3842,4314,4704,4305,6440,6994,9014,9706,8390,9528,9921,9325,11658,12893,13878,16049,15787,16381,16700,17995,18676,18120,17502,17124,17687,16941,15858,15904,15295,14926,15790,15999,16332,16950,17238,18344,19819,20460,20972,20401,19655,19913,19624,19163,19474,19382,16982,19480,16578,14095], 
+                             spanGaps: false,
+                             },
+                            {
+                             label: "Kuukausimuutos",
+                              fill: false,
+                              lineTension: 0.1,
+                              backgroundColor: "rgba(75,192,192,0.4)",
+                              borderColor: "red",
+                              borderCapStyle: "butt",
+                              borderDash: [],
+                              borderDashOffset: 0.0,
+                              borderJoinStyle: "miter",
+                              pointBorderColor: "rgba(75,192,192,1)",
+                              pointBackgroundColor: "#fff",
+                              pointBorderWidth: 1,
+                              pointHoverRadius: 5,
+                              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                              pointHoverBorderColor: "rgba(220,220,220,1)",
+                              pointHoverBorderWidth: 2,
+                              pointRadius: 1,
+                              pointHitRadius: 10,
+                              data: [,-1404,-1801,-1285,-1608,363,430,-1982,-2427,-1512,-1342,230,-996,-1761,-1454,-1134,-1212,147,210,-1752,-1651,-1179,-810,313,-387,-729,-1036,-856,-1483,590,349,-1968,-477,-817,-986,1713,-850,-622,-562,-75,-297,1283,960,-100,664,1134,1711,2724,2179,847,741,629,589,2190,2185,-317,-276,261,228,1466,747,-706,-645,-356,-608,870,1186,-1025,-1098,-376,210,875,802,1272,-454,855,1198,397,1658,-635,-1497,1759,764,2895,1494,-44,684,1248,602,2730,2893,350,674,1497,1358,3214,2789,637,128,630,224,3293,2147,-733,720,888,989,4078,2998,970,746,918,1330,4768,2788,-221,149,142,1247,3789,2537,1281,654,-1482,3828,1866,305], 
+                              spanGaps: false,
+                              }
+                             ]
+                             };
+                             var myLineChart = new Chart(ctx, {
+                             type: "line",
+                             data: data
+                             });
+                             <!--kuvablokki -->
+                              
+    var ctx = document.getElementById("TM-kuva-4");
+    
+    
+    var data = {
+      labels: ["Ty��myysaste","Pitk墩kaisty��mien osuus"],
+      datasets: [
+        {
+          label: "Koko maa",
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(179,181,198,1)",
+          data: [65, 59]
+        },
+        {
+          label: "Koko maa",
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(255,99,132,1)",
+          data: [28, 48]
+        }
+        ]
+    };
+var myRadarChart = new Chart(ctx, {
+      type: "radar",
+                 data: data
+  });
+  <!--kuvablokki -->
+};
+	 </script>
+	 
+</head>
+<body>
+    <header>
+      
+    </header>
+    <!-- HEADER END-->
+   
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+						<div class="btn-group">
+											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Taloustilanne<span class="caret"></span></button>
+											  <ul class="dropdown-menu">
+<li><a href="out_talous_SSS.html">Koko maa</a></li><li><a href="out_talous_049.html">Espoo - Esbo</a></li>
+												
+											  </ul>
+											  </div>
+						<div class="btn-group">
+											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Työmarkkinatilanne<span class="caret"></span></button>
+											  <ul class="dropdown-menu">
+<li><a href="out_tyomarkkina_SSS.html">Koko maa</a></li><li><a href="out_tyomarkkina_049.html">Espoo - Esbo</a></li>
+												
+											  </ul>
+					</div>
+						<div class="btn-group">
+						  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Väestönmuutokset<span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+<li><a href="out_vaestonmuutos_SSS.html">Koko maa</a></li><li><a href="out_vaestonmuutos_049.html">Espoo - Esbo</a></li>
+							
+						  </ul>
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+        <div class="container">
+             <div class="row">
+                    <div class="col-md-12">
+                        <h1 tunniste="TM-otsikko"class="page-head-line">Työmarkkinatilanne:<br><style="font-size: 25px;"> Koko maa , 07/2016</h1>
+                    </div>
+                </div>
+				 <div class="row"> <!-- Default panel & Primary Panel & Succes panel -->
+				 
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Työttömyysaste
+                        </div>
+                        <div class="lukupaneeli">
+                            <p id="TM-luku-1">14.4 %</p>
+                        </div>
+                        <div class="panel-footer">
+                           
+                        </div>
+					
+                    </div>
+                </div>
+				
+				
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Muutos edelliseen kuukauteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: rgba(215,48,39)" id="TM-luku-2">+0.5 %</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Verrattuna viime vuoteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: green;" id="TM-luku-3">-0.1 %</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				
+				
+            </div>
+			
+				<div class="row" style="padding-left:15px;padding-right:15px;"> 	<!-- TM-kuva1 -->
+				
+				<div class="panel panel-kuva" >
+									<h4 class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Aikasarja</a>
+									</h4>
+									
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+									<div class="panel-body">
+									<canvas id="TM-kuva-1" width="400" height="200" ></canvas>
+									  
+									</div>
+								</div>
+						
+			</div>	<!-- TM-kuva1 loppu -->
+			<div class="row"> <!-- Default panel & Primary Panel & Succes panel -->
+				 
+			 <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Työttömiä
+                        </div>
+                        <div class="lukupaneeli">
+                            <p id="TM-luku-4">378399</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Muutos edelliseen kuukauteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: darkred;" id="TM-luku-5">+12313</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Verrattuna viime vuoteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: green;" id="TM-luku-6">-3197</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+				<div class="row" style="padding-left:15px;padding-right:15px;"> 	<!-- TM-kuva2 -->
+				
+				<div class="panel panel-kuva" >
+									<h4 class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">Aikasarja</a>
+									</h4>
+									
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+									<div class="panel-body">
+									<canvas id="TM-kuva-2" width="400" height="200" ></canvas>
+									  
+									</div>
+								</div>
+						
+			</div>	<!-- TM-kuva2 loppu -->
+				
+				<div class="row">
+				<div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Pitkäaikaistyöttömiä
+                        </div>
+                        <div class="lukupaneeli">
+                            <p id="TM-luku-7">127150</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Muutos edelliseen kuukauteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: darkred;" id="TM-luku-8">+305</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Verrattuna viime vuoteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: darkred;" id="TM-luku-9">+14095</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				
+				
+			</div>
+			<div class="row" style="padding-left:15px;padding-right:15px;"> 	<!-- TM-kuva2 -->
+				
+				<div class="panel panel-kuva" >
+									<h4 class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Aikasarja</a>
+									</h4>
+									
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse" style="height: 0px;">
+									<div class="panel-body">
+									<canvas id="TM-kuva-3" width="400" height="200" ></canvas>
+									  
+									</div>
+								</div>
+						
+			</div>	<!-- TM-kuva2 loppu -->
+			<br>
+			
+			<br>
+			<br>
+			 <div class="row"> <!-- Collapsible Accordion Panel Group -->
+			
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Vertailu
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">Koko maa</a>
+                                        </h4>
+										
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+										<canvas id="TM-kuva-4" width="400" height="200" ></canvas>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">Maakunta</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" style="height: auto;">
+                                        <div class="panel-body">
+                                           <canvas id="TM-kuva-2" width="400" height="200" ></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+        </div>
+    </div>
+	</section>
+    <!-- CONTENT-WRAPPER SECTION END-->
+    <footer>
+      
+    </footer>
+    <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+</body>
+</html>
