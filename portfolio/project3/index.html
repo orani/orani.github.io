@@ -1,2 +1,184 @@
+
+<html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-<h1>Google chartsin hyödyntäminen suomalaisten kuntien työllisyyden aikaperspektiivianalyysissä</h1>
+<head charset="UTF-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+		
+		raportti();
+        e.preventDefault();
+    });
+	});
+
+</script>
+<script type="text/javascript" src="grafiikka.js" charset="UTF-8"></script>
+<script type="text/javascript" src="hae_taulukko.js" charset="UTF-8"></script>
+<script type="text/javascript" src="alustus_funktiot.js" charset="UTF-8"></script>
+<script type="text/javascript" src="raportti.js" charset="UTF-8"></script>
+<style>
+h1 {
+    
+    color: #996600;
+    font-size: 50px;
+	
+	margin-top:1%;
+	float:none;
+	text-align: center;
+}
+
+.vuosirajaus {
+    
+    color: #996600;
+    font-size: 35px;
+	
+	margin-top:1%;
+	float:none;
+	text-align: center;
+}
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+</style>
+</head>
+<body onload="metat();haekokomaa(); ">
+
+<div id="input"  style="width:100%; ">
+<input id="kuntakysely" value="091" list="kuntaKooditNimet" onkeypress="raportti_alustus(event);" onfocus="select();vaihtoehdot();" size="15" type="text">
+<button onclick="raportti_alustus('nappulasta');raportti();" style="visibility:hidden">Hae luvut</button>
+<input id="vuosi_min" value="1987"   onclick="select()" size="4" type="text">
+<input id="vuosi_max" value="2013"   onclick="select()" size="4" type="text">
+
+</div>
+
+<div id="teksti_container" class="tekstikentta" style="width:100%; "> 
+<h1 id="otsikko">Valitse kunta</h1>
+<p id="kpl_1">.</p>
+<br>
+</div>
+
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1" onclick="raportti()">Vaestotiedot</a></li>
+        <li><a href="#tab2" >Tyollisyystiedot</a></li>
+        <li><a href="#tab3">Huoltosuhteet</a></li>
+        
+    </ul>
+
+<div class="tab-content">
+		<div id="tab1" class="tab active" onclick="raportti()">
+<input name="vaestotietokuva_tyyppi" id="vaestotietokuva_tyyppi_N" type="radio" value="kokonaisluku" checked=true >Kokonaisluku (pylväsdiagrammi)
+<input name="vaestotietokuva_tyyppi" id="vaestotietokuva_tyyppi_NP" type="radio" value="kokonaisluku_pinottu" >Kokonaisluku (pinottu pylväsdiagrammi)
+<input name="vaestotietokuva_tyyppi" id="vaestotietokuva_tyyppi_P" type="radio" value="prosentti" >Osuus
+<input name="vaestotietokuva_tyyppi" id="vaestotietokuva_tyyppi_100" type="radio" value="indeksi">1. vuosi=100 %
+<input name="vaestotietokuva_tyyppi" id="vaestotietokuva_tyyppi_0" type="radio" value="indeksi">1. vuosi=0
+<br>
+
+<div id="vaestotietokuva"></div>
+ </div>
+ 
+        <div id="tab2" class="tab" onclick="raportti()">
+	<input name="tyollisyyskuva_tyyppi" id="tyollisyyskuva_tyyppi_N" type="radio" value="kokonaisluku" checked>Kokonaisluku (pylväsdiagrammi)
+	<input name="tyollisyyskuva_tyyppi" id="tyollisyyskuva_tyyppi_NP" type="radio" value="kokonaisluku_pinottu" checked>Kokonaisluku (pinottu pylväskaavio)
+	<input name="tyollisyyskuva_tyyppi" id="tyollisyyskuva_tyyppi_P" type="radio" value="prosentti" >Osuus
+	<input name="tyollisyyskuva_tyyppi" id="tyollisyyskuva_tyyppi_100" type="radio" value="indeksi" >1. vuosi=100 %
+	<input name="tyollisyyskuva_tyyppi" id="tyollisyyskuva_tyyppi_0" type="radio" value="indeksi" >1. vuosi=0
+	<br>
+
+       <div id="tyollisyyskuva"></div>
+</div>
+ 
+        <div id="tab3" class="tab" onclick="raportti()">
+	<input name="huoltosuhdekuva_tyyppi" id="huoltosuhdekuva_tyyppi_N" type="radio" value="kokonaisluku" checked>Kokonaisluku
+	<input name="huoltosuhdekuva_tyyppi" id="huoltosuhdekuva_tyyppi_100" type="radio" value="indeksi" >1. vuosi=100 %
+	<input name="huoltosuhdekuva_tyyppi" id="huoltosuhdekuva_tyyppi_0" type="radio" value="indeksi" >1. vuosi=0
+	<br>
+
+       <div id="huoltosuhdekuva"></div>
+</div>     
+</div>
+
+
+</div>
+
+<br>
+
+<p id="taulukkodata" style="visibility:hidden;">.</p>
+<p id="taulukkodata_kokomaa" style="visibility:hidden;">DDD</p>
+
+<p id="taulukoitavakuntakoodi" style="visibility:hidden">.</p>
+
+<datalist id="kuntaKooditNimet">
+	<option value="Testikunta"></option>
+</datalist>
+
+
+</body>
+</html>
+
