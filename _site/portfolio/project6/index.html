@@ -1,3 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<h1>Projektia toimialojen paikantamiseen kaupunkitasolla</h1>
+<head>
+<title>Orani</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+ <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    } 
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+<style type="text/css">
+	table.tableizer-table {
+	border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+} 
+.tableizer-table td {
+	padding: 4px;
+	margin: 3px;
+	border: 1px solid #ccc;
+}
+.tableizer-table th {
+	background-color: #104E8B; 
+	color: #FFF;
+	font-weight: bold;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar" >
+ <h1 style="width:60%;"><a href="http://orani.github.io/">Orani</a></h1>   
+  <a href="mailto:topias.pyykkonen@gmail.com">topias.pyykkonen@gmail.com</a>
+                    </div>
+<div id="container">
+  <div id="wrapper">
+    <div id="content">
+      
+<p class="lead">
+       
+     <h1 id="header">Kuinka kaukana on lähin työpaikka?</h1><h2>Avointen työpaikkojen ja työttömien etäisyyden arviointa avoimen datan perusteella</h2>
+    <p>
+Työttömyydestä keskusteltaessa ihmetellään, miten samanaikaisesti voi olla avoimia työpaikkoja ja työttömiä. Kyse on tietysti siitä, ettei työpaikan ominaisuudet/vaatimukset ja/tai työntekijän ominaisuudet/vaatimukset kohtaa. Yksi tällainen ns. kohtaanto-ongelma  syntyy, mikäli työpaikka sijaitsee kaukana työttömän henkilön kodista. 
+Työtön henkilö on nykyisellään velvoitettu ottamaan vastaan työvoimahallinnon tarjoaman työpaikan mikäli se sijaitsee 80 kilometrin päässä. Työttömiä ja
+avoimia työpaikkoja tilastoidaan, muttei maasta silti (tietääkseni?) löydy lukuja siitä, kuinka kaukana avoimet työpaikat ja työttömät
+ovat toisistaan.
+</p>
+<h3>Miten?</h3>
+<p>
+Jotta voitaisiin laskea, kuinka kaukana avoimet työpaikat sijaitsevat työttömistä – eli selvittää alueellisen kohtaanto-ongelman laajuus – pitäisi kuitenkin tietää työpaikan ja työttömien sijainti mahdollisimman tarkasti. Avoimia työpaikkoja tilastoidaan Tilastokeskuksen ja Työ- ja elinkeinoministeriön (TEM) toimesta. 
+Kumpikin tilasto sisältää tietoja aluetasolla, muttei kuitenkaan kovin tarkalla aluetasolla. 
+Työttömiä tilastoidaan niin ikään Tilastokeskuksen ja Työ- ja elinkeinoministeriön toimesta. 
+TEM tarjoaa tarkimmillaan kunnittaisia tietoja, Tilastokeskus postinumeroalueittain. 
+Postinumeroaluettainen tieto valmistuu kunnittaisia myöhemmin, minkä vuoksi se on saatavilla tällä hetkellä vuodelle 2013 (kuvaa vuoden lopun tietoa).
+</p>
+
+<p>
+Avointen työpaikkojen sijainnin selvittämiseksi poimin mol.fi -palvelusta 29.-31.12.2015 avoinna olleet työpaikat ja
+niiden postinumeron. Tietojen haku perustuu ns. <a href="https://en.wikipedia.org/wiki/Web_scraping">web scraping -tekniikkaan</a>,
+jossa ideana on kerätä informaatiota nettisivuilta massoittain.
+Työpaikkojen tiedot poimin siis "kyselemällä" mol.fi-palvelun RSS-feediä sen tarjoamilla parametreilla siten, 
+että kaikki avoinna olevat työpaikat tulevat feediin, sillä feedi ei tarjoa kaikkia n. 11 000 työpaikkaa samanaikaisesti.
+RSS-feedistä poimin kunkin työpaikan yksilöivän tunnuksen, joka yhdistettynä geneeriseen urliin muodostaa linkin ko. työpaikan 
+ominaisuustiedot sisältävälle sivulle. Tämän jälkeen ei tarvinnut kuin loopata ko. linkit läpi, lukea HTML:t sisään ja parsia niistä
+esiin tarvittava tieto eli käytännössä sijaintitiedot. </p>
+<p>Toteutus on tehty pääosin <a href='https://www.r-project.org/'>R-ohjelmointikielellä</a>,
+mutta joissakin osissa hyödynsin (postgre-)SQL-kieltä.
+Alueiden rajat karttakuvioita varten on haettu Tilastokeskuksen <a href='http://www.stat.fi/tup/rajapintapalvelut/index.html'>rajapinnasta</a> QGIS:n avulla ja käännetty shape-muotoon R:ää varten.
+Kuntien ja postinumeroalueiden keskipisteet laskin R:llä. </p>
+
+<p>Työttömien osalta jouduin tyytymään karkeampaan aluejakoon: postinumeroaluettainen data on vuodenvaihteesta 2013/2014, joten se ei ehkä 
+kuvaa oikein nykyistä tilannetta. Työttömien määrä kunnittain on poimittu <a href="http://www2.toimialaonline.fi/">työnvälitystilastosta.</a> Työttömien määrä kuvaa marraskuun (2015) tilannetta eli
+viiteajankohta heittää noin kuukaudella -- tässä mielessä sijaintitietojen vertailu on vähän hassua. Toisaalta, työttömien määrissä olevat
+alueelliset erot eivät todennäköisesti muutu kuukaudessa kovin radikaalisti, joten luvut ovat vähintäänkin suuntaa-antavia. Palvelusta
+on saatavilla ainoastaan työttömien lukumäärä kunnittain, joten etäisyyslaskennoissa on tyydyttävä siihen.</p>
+
+<p>Etäisyyden voisi laskea hyödyntäen kuntien/postinumeroalueiden rajoja tai keskipisteitä. Itse päädyin jälkimmäiseen eli työttömien sijainnilla tarkoitetaan tässä työttömien asuinkunnan.
+keskipistettä ja tietyn postinumeroalueen työpaikkojen sijainti on ko. postinumeroalueen keskipiste.
+Keskipiste on siinä mielessä hyvä ratkaisu, että kuntien keskustaan keskittyy yleensä suurin osa asutuksesta ja siten työttömistäkin. Tässä mielessä kunnan
+keskipiste toimii hyvänä korvikkeena todelliselle sijaintitiedolle.</p>
+<h3>Missä työpaikat sijaisevat?</h3>
+<p>Kaikkiaan aineistossa oli 10 922 työpaikkaa, jotka pystyin paikantamaan postinumeroalueelle. Osalle työpaikkoja ei löytynyt postinumeroaluetietoa (esim. 
+henk.koht.avustajat ymmärrättävistä syistä). Postinumeroalueista ei voi täysin varmasti tiedä viittaako postinumeroalue pelkästään työpaikkaa
+tarjoavan yrityksen pääkonttoriin tms. varsinaisen työpaikan sijaitessa jossakin toisessa toimipaikassa. Lukuihin pitää siis suhtautua
+hieman varauksella. </p>
+<p>
+Koska ihmiset käyvät töissä postinumeroalueiden rajoista piittaamatta,
+ei ole mielekästä kuvata työpaikkojen määrää postinumeroalueittain (tällainen kartta ei ole kovin informatiivinen), 
+vaan työpaikkakeskittymiä. Seuraavassa kartassa olen pyrkinyt kuvaamaan avointen työpaikkojen jakautumista alueittain.
+Kunkin postinumeroalueen työpaikkojen määrä on kaikkien alle 30 kilometrin päässä olevien postinumeroalueiden työpaikkojen summa.
+Etäisyydet on laskettu postinumeroalueiden keskipisteiden välillä. 
+</p>
+<p>Kaikista noin 11 000sta työpaikasta 5 % (eli ~547) oli ilmoitettu Helsingin keskustaan eli postinumeroon 00100. Seuraavaksi eniten
+työpaikkoja oli Tampereen (33100, 314 työpaikkaa), Turun (20100, 292 työpaikkaa) ja Kuopion (70100, 185 työpaikkaa) keskustoissa. Viidentoista
+työpaikkamäärältään suurimman postinumeroalueen alueella sijaitsi neljäsosa (~2700) kaikista työpaikoista, mikä on hieman yllättävä luku,
+kun työpaikkoja oli aineistossa ylipäätään noin 1200 eri postinumeroalueella. Kaupunkien keskustoissa sijaitsevilla postinumeroalueilla (eli postinumeron
+kolme viimeistä merkkiä ovat 100) oli kolmannes kaikista työpaikoista.
+</p>
+
+
+<h4>Kuvio 1. Avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h4>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva1.jpeg" 
+style="width: 50%; height: 50%" title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
+
+
+<br>
+<p>
+Ei ole yllätys, että avoimet työpaikat keskittyvät kaupunkeihin, sillä suhteuttamattomat luvut heijastelevat tietysti alueella asuvan väestön määrää. Tampereen ja pääkaupunkiseudun alueilla on työpaikkakeskittymä, jossa työpaikkoja on auki yli seitsemänsataa. Tosin PK-seutu kilpailee omassa luokassaan yli 3000:lla avoimella työpaikalla. 
+</p>
+<p>
+Jos Etelä-Suomea katsoo tarkemmin, näyttää siltä, että avoimet työpaikat jakautuvat raiteita mukaillen. Pääkaupunkiseutu ja Lahden seutu näyttävät kasvavan kiinni toisiina ja Turun ja Tampereen suuntaan kulkevat väylät voi erottaa kartasta. 
+</p>
+<br>
+<h4>Kuvio 2.  Etelä-Suomen avoimet työpaikat alueittain 29.-31.2015 (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)</h4>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva2.jpeg"
+style="width: 50%; height: 50%"  title="Avoimet työpaikat alueittain (kaikki työpaikat 30km säteellä postinro.alueen keskipisteestä)"/>
+<br>
+<br>
+<h3>Entä miten työttömät sijoittuvat suhteessa avoimiin työpaikkoihin?</h3>
+<p> Eniten työttömiä on tietysti kaupungeissa samaan tapaan kuin työpaikkojakin. TEM:n mukaan työttömänä oli marraskuun (2015) lopussa
+342 106	henkilöä, joista 114 372 oli pitkäaikaistyöttömiä.  Kuviossa 3 on kuvattu kuntien työttömien määrää ja 30km säteellä olevien avointen työpaikkojen määrää kaikissa kunnissa 
+ja erikseen pienimmissä. Kuviosta nähdään, että parhaimmassa asemassa ovat ns. kehyskunnat, jotka sijaitsevat kohtuullisella etäisyydellä
+keskuskunnista. Työpaikkojen saavutettavuus on kehyskunnissa hyvä, mutta työttömiä ei ole juurikaan. Työttömät keskittyvät työssäkäyntialueiden
+keskuksiin. Hyvä esimerkki tästä on Tampere, joka nojaa työpaikkatarjonnassaan itseensä. Tampereella onkin enemmän työttömiä kuin Espoossa tai Vantaalla ja
+vähemmän tavoitettavissa olevia avoimia työpaikkoja kuin Espoossa ja Vantaalla. Sama suhde on toisaalta myös Lempäälän ja Tampereen välillä: Tampereella on työpaikat ja työttömät, Lempäällä vain työpaikat. </p>
+<br>
+<h4>Kuvio 3. 30km säteellä olevat avoimet työpaikat ja työttömien määrä kunnittain (11/2015)</h4>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva4.png"
+style="width: 50%; height: 50%"  title="30km säteellä olevien avointen työpaikkojen määrä ja työttömien määrä (11/2015)"/>
+<br>
+<br><p>
+Kaikista 341 000 työttömästä ~39 000:lla (~11%) ei ollut yhtään avointa työpaikkaa 30 km säteellä. Noin 24 prosentilla oli lähietäisyydellä (eli 30km)
+säteellä 50-99 työpaikkaa. Ehkä mielenkiintoisinta - ja yllättävintä - on pitkäaikaistyöttömien vertailu muihin työttömiin.  </p>
+<br>
+<p>
+Hieman yllättäen nimittäin pitkäaikaistyöttömät asuivat lähempänä avoimia työpaikkoja.  Pitkäaikaistyöttömistä 79 prosentilla oli vähintään 100 työpaikkaa 30km säteellä
+ja noin 42 prosentilla vähintään 500 työpaikkaa 50km säteellä. Tätä selittää työttömyyden ja työpaikkojen keskittyminen kaupunkeihin. 
+Voi olla, että kaupunkien kehyskuntiin keskittyy henkilöitä, joilla ei ole hankaluuksia työllistyä.
+</p>
+<h4>Taulukko 1. Työttömät 30km säteellä olevien työpaikkojen lukumäärän ja työttömyyden keston mukaan</h4>
+<table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Työpaikkoja 30km säteellä</th><th>Työttömiä (pl. Pitkäaikaistyöt.)</th><th>%</th><th>Pitkäaikaistyöttömiä</th><th>%</th><th>Työttömiä yhteensä</th><th>%</th></tr>
+ <tr><td>0</td><td>27308</td><td>12,0</td><td>11256</td><td>9,8</td><td>38564</td><td>11,3</td></tr>
+ <tr><td>50</td><td>30766</td><td>13,5</td><td>12292</td><td>10,8</td><td>43058</td><td>12,6</td></tr>
+ <tr><td>100</td><td>11116</td><td>4,9</td><td>5080</td><td>4,4</td><td>16196</td><td>4,7</td></tr>
+ <tr><td>200</td><td>44577</td><td>19,6</td><td>20124</td><td>17,6</td><td>64701</td><td>18,9</td></tr>
+ <tr><td>300</td><td>22506</td><td>9,9</td><td>12036</td><td>10,5</td><td>34542</td><td>10,1</td></tr>
+ <tr><td>400</td><td>11750</td><td>5,2</td><td>5821</td><td>5,1</td><td>17571</td><td>5,1</td></tr>
+ <tr><td>500</td><td>2926</td><td>1,3</td><td>1439</td><td>1,3</td><td>4365</td><td>1,3</td></tr>
+ <tr><td>600</td><td>14442</td><td>6,3</td><td>7554</td><td>6,6</td><td>21996</td><td>6,4</td></tr>
+ <tr><td>700</td><td>12935</td><td>5,7</td><td>6953</td><td>6,1</td><td>19888</td><td>5,8</td></tr>
+ <tr><td>800</td><td>3238</td><td>1,4</td><td>1442</td><td>1,3</td><td>4680</td><td>1,4</td></tr>
+ <tr><td>900</td><td>0</td><td>0,0</td><td>0</td><td>0,0</td><td>0</td><td>0,0</td></tr>
+ <tr><td>1000</td><td>1331</td><td>0,6</td><td>848</td><td>0,7</td><td>2179</td><td>0,6</td></tr>
+ <tr><td>2000</td><td>2017</td><td>0,9</td><td>1190</td><td>1,0</td><td>3207</td><td>0,9</td></tr>
+ <tr><td>3000</td><td>11065</td><td>4,9</td><td>7741</td><td>6,8</td><td>18806</td><td>5,5</td></tr>
+ <tr><td>4000</td><td>31664</td><td>13,9</td><td>20535</td><td>18,0</td><td>52199</td><td>15,3</td></tr>
+ <tr><td>Yhteensä</td><td>227641</td><td>100,0</td><td>114311</td><td>100,0</td><td>341952</td><td>100,0</td></tr>
+</table>
+<br>
+<p>Jos rajaksi otetaan 50 kilometriä, tippuu
+luku 10 000:een ja jos raja on 80 kilometriä, on luku noin 800 henkeä. Noin 76 prosentilla työttömistä oli vähintään 100 avointa työpaikkaa
+30 kilometrin säteellä ja noin 37 prosentilla vähintään 500 avointa työpaikkaa 50km säteellä.
+</p>
+
+<br>
+
+<h4>Kuvio 4. Työttömien kumulatiivinen osuus työpaikkojen (30/50/80km säteellä) ja työttömyyden keston mukaan</h4>
+<img src="https://2b4dbe0661e8c02dcfaa128d5c9e328b127bfb8e.googledrive.com/host/0B_5xOghN4m1RTi1jdWNSSHIwU1k/Kuva5.png"
+style="width: 50%; height: 50%"  title="Työttömien kumulatiivinen osuus työpaikkojen (30/50/80km säteellä) ja työttömyyden keston mukaan"/>
+<br>
+<br>
+<p>
+Avoimet työpaikat tai työmahdollisuudet ylipäätään eivät tietenkään rajoitu mol.fi -palveluun ilmoitettuihin työpaikkoihin. Luvusta puuttuu 
+muihin työnvälityspalveluihin ilmoitetut työpaikat ja ns. piilotyöpaikat. Voisi kuitenkin ajatella, että työkkärin työpaikkojen sijainti
+on suuntaa-antava, sillä ei liene mitään syytä epäillä, että mol-fi -palvelun työpaikkojen alueellinen jakauma olisi jotenkin vino suhteessa
+muihin työmahdollisuuksiin. Työpaikkojen määrät eivät siten ole kuin suuntaa antavia, mutta ehkä niiden perusteella voisi tehdä varovaisia
+arvioita siitä, miten työttömät ja työpaikat kohtaavat alueellisesta näkökulmasta</p>
+<p>Harva työtön näyttää olevan asuinpaikkansa puolesta täysin työmarkkinoilta sivussa. Toisaalta: se, että alueella on tarjolla 100 työpaikkaa
+ei tarkoita, että siellä olisi 100 työpaikkaa haettavana. Kaikille töitä etsineille lienee selvää, ettei kaikkia palvelun työpaikkoja voi hakea jo pelkästään koulutusvaatimuksien puolesta.</p>
+      </div>
+  </div>
+  <div id="navigation" style="visibility:hidden">
+    <p><strong></strong></p>
+    <ul>
+      <li><a href="http://www.free-css.com/">Orani</a></li>
+
+    </ul>
+  </div>
+ 
+  <div id="footer" style="visibility:visible">
+     <div class="col-lg-4 text-center">
+                   <a href="mailto:topias.pyykkonen@gmail.com"> <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i></a>
+              
+                </div>
+  </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+<script type="text/javascript">
+    $(function($){
+        var addToAll = true;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+    $.noConflict();
+</script>
+</body>
 </html>
