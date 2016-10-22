@@ -1,0 +1,392 @@
+Ôªø<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Kuntaraportti</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js'></script>
+	 
+	
+	  <script type="text/javascript" id="kuvaSkriptiBlokki"> window.onload = function () {
+	<!--kuvablokki --> 
+                             var ctx = document.getElementById("TM-kuva-1");
+                             var data = {
+                             labels:["2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-05","2010-06","2010-07","2010-08","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+                             datasets: [
+                             {
+                             label: "H‰meenlinna",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgba(75,192,192,0.4)",
+                             borderColor: "rgba(75,192,192,1)",
+                             borderCapStyle: "butt",
+                             borderDash: [],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgba(75,192,192,1)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [269,329,402,548,307,215,242,301,299,304,309,294,400,2177,678,454,463,354,392,583,668,495,356,349,664,1944,489,481,463,311,389,374,342,422,227,176,324,737,660,584,281,175,228,252,274,405,494,474,470,754,812,787,544,427,386,575,477,460,588,284,787,811,696,696,508,609,673,630,384,427,412,299,704,671,507,476,364,557,334,537,537,282,290,298,518,1140,452,573,487,345,318,344,411,283,293,265,423,761,494,380,389,290,343,397,301,337,244,201,426,603,479,576,943,367,321,282,240,319,309,301,464,541,505,604,419,323,436], 
+                             spanGaps: false,
+                             },
+                            {
+                             label: "Trendi",
+                              fill: false,
+                              lineTension: 0.1,
+                              backgroundColor: "rgba(75,192,192,0.4)",
+                              borderColor: "red",
+                              borderCapStyle: "butt",
+                              borderDash: [],
+                              borderDashOffset: 0.0,
+                              borderJoinStyle: "miter",
+                              pointBorderColor: "rgba(75,192,192,1)",
+                              pointBackgroundColor: "#fff",
+                              pointBorderWidth: 1,
+                              pointHoverRadius: 5,
+                              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                              pointHoverBorderColor: "rgba(220,220,220,1)",
+                              pointHoverBorderWidth: 2,
+                              pointRadius: 1,
+                              pointHitRadius: 10,
+                              data: [362.95,366.16,371.47,377.69,382.39,387.49,394.48,402.8,413.66,428.3,445.31,461.63,478.25,496.84,512.33,524.48,538.93,552.98,565.27,577.14,582.02,578.49,573.04,567.94,559.48,541.84,519.37,503.69,493.77,481.58,465.26,446.41,429.56,413.82,397.15,386.3,383.03,384.15,388.14,389.2,386.63,388.87,397.48,409.69,427.26,450.2,476,496.23,506.92,520.11,538.48,555.48,569.85,579.66,588.2,599.64,606.85,608.87,608.89,608.6,612.16,613.75,611.51,609.45,607.43,606.38,601.53,586.9,571.68,562.37,552.85,542.61,530.8,517.73,509.08,503.16,499.97,498.09,494.67,494.38,492.35,485.46,481.22,479.97,480.29,479.7,474.05,467.86,460.76,450.78,442.22,436.17,432.27,428.96,425.59,421.02,415.03,410.09,405.4,399.6,396.87,400.39,406.31,409.47,410.11,409.75,408.02,408.94,413.84,418.28,423.49,432.74,438.51,433.82,426.41,422.54,421.57,422.77,426.22,431.79,434.76,433.45,430.48,424.82,420.02,420.31,421.38], 
+                              spanGaps: false,
+                              }
+                             ]
+                             };
+                             var myLineChart = new Chart(ctx, {
+                             type: "line",
+                             data: data
+                             });
+                             <!--kuvablokki -->
+                              
+                             var ctx = document.getElementById("TM-kuva-2");
+                             var data = {
+                             labels:["2006-01","2006-02","2006-03","2006-04","2006-05","2006-06","2006-07","2006-08","2006-09","2006-10","2006-11","2006-12","2007-01","2007-02","2007-03","2007-04","2007-05","2007-06","2007-07","2007-08","2007-09","2007-10","2007-11","2007-12","2008-01","2008-02","2008-03","2008-04","2008-05","2008-06","2008-07","2008-08","2008-09","2008-10","2008-11","2008-12","2009-01","2009-02","2009-03","2009-04","2009-05","2009-06","2009-07","2009-08","2009-09","2009-10","2009-11","2009-12","2010-01","2010-02","2010-03","2010-04","2010-05","2010-06","2010-07","2010-08","2010-09","2010-10","2010-11","2010-12","2011-01","2011-02","2011-03","2011-04","2011-05","2011-06","2011-07","2011-08","2011-09","2011-10","2011-11","2011-12","2012-01","2012-02","2012-03","2012-04","2012-05","2012-06","2012-07","2012-08","2012-09","2012-10","2012-11","2012-12","2013-01","2013-02","2013-03","2013-04","2013-05","2013-06","2013-07","2013-08","2013-09","2013-10","2013-11","2013-12","2014-01","2014-02","2014-03","2014-04","2014-05","2014-06","2014-07","2014-08","2014-09","2014-10","2014-11","2014-12","2015-01","2015-02","2015-03","2015-04","2015-05","2015-06","2015-07","2015-08","2015-09","2015-10","2015-11","2015-12","2016-01","2016-02","2016-03","2016-04","2016-05","2016-06","2016-07"],
+                             datasets: [
+                             {
+                             label: "H‰meenlinna",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgb(200, 0, 0)",
+                             borderColor: "rgb(200, 0, 0)",
+                             borderCapStyle: "butt",
+                             borderDash: [],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgba(75,192,192,1)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [-0.767043831916356,-0.539572572947583,-0.262815874535575,0.290697522288441,-0.622978701236133,-0.971767964988252,-0.869405898452304,-0.64572582713301,-0.65330820243197,-0.634352264184572,-0.615396325937174,-0.672264140679367,-0.270398249834534,6.46654220329064,0.783551916720783,-0.065674116762638,-0.0315534279173219,-0.444792881710594,-0.300727751030371,0.423389090020225,0.745640040225988,0.0897645768660239,-0.437210506411635,-0.463748819957992,0.730475289628069,5.5831954809619,0.0670174509691466,0.0366879497733101,-0.0315534279173219,-0.607813950638215,-0.312101313978809,-0.368969128721003,-0.490287133504348,-0.186992121545984,-0.926273713194498,-1.11962428331796,-0.558528511194981,1.00723198804008,0.715310539030151,0.427180277669705,-0.721549580122602,-1.12341547096743,-0.922482525545018,-0.831494021957509,-0.748087893668958,-0.251442311587136,0.0859733892165444,0.0101496362269532,-0.00501511437096502,1.07168217808123,1.29157106175104,1.19679137051406,0.275532771690522,-0.168036183298586,-0.323474876927248,0.393059588824389,0.0215231991753919,-0.0429269908657606,0.442345028267623,-0.710176017174163,1.19679137051406,1.28777987410156,0.851793294411415,0.851793294411415,0.139050016309258,0.521959968906694,0.764595978473385,0.601574909545764,-0.331057252226207,-0.168036183298586,-0.224903998040779,-0.65330820243197,0.882122795607252,0.757013603174426,0.135258828659779,0.0177320115259123,-0.406881005215798,0.324818211133757,-0.520616634700185,0.248994458144165,0.248994458144165,-0.717758392473122,-0.687428891277286,-0.657099390081449,0.176961892804054,2.53508061078034,-0.0732564920615971,0.38547721352543,0.0594350756701875,-0.47891357055591,-0.581275637091858,-0.482704758205389,-0.228695185690259,-0.713967204823643,-0.676055328328847,-0.782208582514274,-0.183200933896504,1.09822049162759,0.0859733892165444,-0.346222002824125,-0.312101313978809,-0.687428891277286,-0.486495945854869,-0.281771812782973,-0.64572582713301,-0.509243071751746,-0.861823523153345,-1.02484459208097,-0.171827370948066,0.499212843009816,0.029105574474351,0.396850776473868,1.78821664383287,-0.39550744226736,-0.569902074143419,-0.717758392473122,-0.876988273751264,-0.577484449442378,-0.615396325937174,-0.64572582713301,-0.0277622402678424,0.264159208742084,0.12767645336082,0.503004030659296,-0.198365684494423,-0.56231969884446,-0.13391549445327], 
+                             spanGaps: false,
+                             },
+                             {
+                             label: "Trendi",
+                             fill: false,
+                             lineTension: 0.1,
+                             backgroundColor: "rgb(200, 50, 0)",
+                             borderColor: "white",
+                             borderCapStyle: "butt",
+                             borderDash: [5],
+                             borderDashOffset: 0.0,
+                             borderJoinStyle: "miter",
+                             pointBorderColor: "rgb(200, 50, 0)",
+                             pointBackgroundColor: "#fff",
+                             pointBorderWidth: 1,
+                             pointHoverRadius: 5,
+                             pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                             pointHoverBorderColor: "rgba(220,220,220,1)",
+                             pointHoverBorderWidth: 2,
+                             pointRadius: 1,
+                             pointHitRadius: 10,
+                             data: [-1.5305604501117,-1.48660821019897,-1.41390216847418,-1.32873614596416,-1.26438239905145,-1.19455173750786,-1.09884265433342,-0.984922830011335,-0.83622459778323,-0.635769522293411,-0.40286372761569,-0.179405610676219,0.0481601922364045,0.302699799706059,0.514793318786477,0.681154600699135,0.879008141739291,1.07138476814858,1.23966297018204,1.40219041185309,1.4690087703497,1.42067499873227,1.34605203688668,1.27622137534309,1.16038463090021,0.918852695678867,0.611187016289778,0.396491962759698,0.260664479914137,0.0937555065383919,-0.129702610401079,-0.387802212380799,-0.618517241206172,-0.834033831930883,-1.06228424917237,-1.2108455585347,-1.25561933564205,-1.24028397467562,-1.1856517512327,-1.17113792746089,-1.20632710396423,-1.17565638203136,-1.0577657946019,-0.89058297549461,-0.650009500333672,-0.335908446253312,0.0173525474377641,0.294347504893984,0.440718048403968,0.621319308356887,0.872846612779564,1.10561548459151,1.3023736427055,1.43669497402757,1.55362710139663,1.71026685983949,1.80898824606091,1.8366466649468,1.83692051067835,1.83294974757097,1.88169428778571,1.90346502344341,1.87279430151054,1.84458819116157,1.81692977227567,1.80255287136964,1.73614528147035,1.5358271288463,1.32743052714172,1.19995533910824,1.06960477089355,0.92939575634329,0.76768985186687,0.588731666303214,0.470293387410663,0.389235050873796,0.345556656692613,0.319815157927526,0.272987537833593,0.269016774726213,0.241221432974551,0.146881578457825,0.0888262833706101,0.0717109251491432,0.0760924568538387,0.0680140077733059,-0.009347411387724,-0.0941026653004278,-0.19131789999836,-0.327966920038551,-0.445172893139156,-0.528011226931055,-0.581411144582032,-0.626732613152477,-0.672875618917551,-0.735449368575234,-0.817466165172503,-0.88510606086374,-0.949322884910684,-1.02873814705829,-1.06611808941397,-1.01792124066232,-0.936862904125456,-0.893595278541587,-0.884832215132196,-0.889761438299979,-0.913449094078489,-0.90085219042749,-0.83375998619934,-0.77296623379669,-0.701629420729615,-0.574975769890761,-0.49597127634047,-0.560188100387413,-0.661647943924269,-0.71463709297793,-0.727918610957789,-0.711487867065181,-0.664249478373931,-0.587983442139075,-0.54731735100487,-0.565254246420968,-0.605920337555172,-0.683418679581975,-0.749141655152408,-0.745170892045027,-0.730520145407452], 
+                             spanGaps: false,
+                             },
+                              {
+                                label: "Koko maa",
+                                fill: false,
+                                lineTension: 0.1,
+                                backgroundColor: "rgb(0, 0, 200)",
+                                borderColor: "rgb(0, 0, 200)",
+                                borderCapStyle: "butt",
+                                borderDash: [],
+                                borderDashOffset: 0.0,
+                                borderJoinStyle: "miter",
+                                pointBorderColor: "rgba(75,192,192,1)",
+                                pointBackgroundColor: "#fff",
+                                pointBorderWidth: 1,
+                                pointHoverRadius: 5,
+                                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                                pointHoverBorderColor: "rgba(220,220,220,1)",
+                                pointHoverBorderWidth: 2,
+                                pointRadius: 1,
+                                pointHitRadius: 10,
+                                data: [0.568747802955505,1.74294573152051,1.53373250059935,0.515023097732741,-0.23926517160649,-0.833368123533063,-0.861054474690807,-0.420297652242091,-0.475999953976122,-0.628110085634437,-0.650605245950104,-0.629181283744707,1.08654848948901,2.66236330955056,2.32674870161756,0.924467975419724,0.328964225964336,-0.269341118548681,-0.213144417686833,0.213769229183011,0.143070153905202,-0.1984772435616,-0.43183363189115,-0.691805173268174,1.58753960567675,2.84487898756962,1.71262258501441,0.712123550022389,0.12156379184517,-0.674336404085312,-0.544474233178755,-0.132804559416596,-0.392034502101894,-0.640634863539131,-0.975095873507225,-1.1631323417869,0.238241986009945,1.25678658916728,0.495906331457156,-0.239347571461126,-0.696501964982434,-1.27346574714469,-1.24668579438794,-1.04818454456948,-1.22443783363619,-1.28780332185138,-1.35866719683846,-1.35660720047256,-0.40109848611187,0.835393732558056,0.544769445256388,-0.0525471010009953,-0.590123752647176,-1.1230036125791,-0.986796652865557,-0.701198756696694,-0.789119401593456,-0.897475210439981,-1.05593013090528,-0.88297283602402,0.778620232713755,1.98965089630111,1.49887736208826,0.51205670296584,-0.0700982700384932,-0.726413112215353,-0.717101928641469,-0.344984185104658,-0.49973111211133,-0.617645304095647,-0.819030548826375,-0.680928392456203,1.22671064222509,2.32608950278047,1.53834689245897,0.676691612528849,0.0512767158405418,-0.783845810896743,-0.711663538235484,-0.518930278241551,-0.521237474171363,-0.863773669893799,-0.970893480920782,-0.773051429939409,0.942513543585038,2.12668185456101,1.1888891089471,0.464099987567606,-0.105530207532034,-0.897475210439981,-0.785905807262646,-0.640634863539131,-0.66008122923326,-0.787718604064642,-0.968751084700242,-0.90752799270559,1.03381258252188,2.19416733550801,1.07163411579987,0.356485777412807,-0.209354024373571,-0.743964281252851,-0.680598793037659,-0.496599917635157,-0.531372656291608,-0.57957657125375,-0.78326901191429,-0.827435333999261,1.00085264066743,2.17513296908707,1.00373663557969,0.663754835350975,0.177430893288473,-0.606768523283677,-0.397967291635697,-0.373494534808763,-0.514068686818019,-0.488936731153996,-0.731192303784249,-0.551643020532099,1.13697720052633,2.06702435980445,1.04081657016595,0.888129639525186,0.117855798386543,-0.289034683806719,-0.189330859696989], 
+                                spanGaps: false,
+                                },
+                                  {
+                                   label: "Trendi, koko maa",
+                                    fill: false,
+                                    lineTension: 0.1,
+                                    backgroundColor: "rgb(0, 50, 200)",
+                                    borderColor: "white",
+                                    borderCapStyle: "butt",
+                                    borderDash: [5],
+                                    borderDashOffset: 0.0,
+                                    borderJoinStyle: "miter",
+                                    pointBorderColor: "rgb(0, 50, 200)",
+                                    pointBackgroundColor: "#fff",
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 5,
+                                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                                    pointHoverBorderWidth: 2,
+                                    pointRadius: 1,
+                                    pointHitRadius: 10,
+                                    data: [-0.509362761491969,-0.421845288213292,-0.312851838108449,-0.202359530511165,-0.126516831578347,-0.0571105529999588,0.0458925652898722,0.182783118111107,0.335878155761299,0.513429041680957,0.726106213732912,0.906833250053213,1.03649971761328,1.22434887610003,1.41459671639015,1.52648336930777,1.67212745381103,1.83951516826411,1.91166425409057,1.92333647935906,1.92283431111754,1.87241101169933,1.76211243398202,1.67660108459204,1.6318673258594,1.46555532205566,1.22502438160257,1.04981099962945,0.862856567298902,0.645331050092837,0.467290741318506,0.281131621126803,0.0335040492809473,-0.261396162356159,-0.58170302812103,-0.867039101473058,-1.10596412318425,-1.34389245564452,-1.57329922246326,-1.75855087111192,-1.90323395344741,-2.04092236748486,-2.17609994031473,-2.28522339336535,-2.34092583201288,-2.31844551870368,-2.25009200907832,-2.2229162952571,-2.19688511717415,-2.06239324615629,-1.86967280081912,-1.70677656068862,-1.57293470439962,-1.41422914746226,-1.22514113737462,-1.04401134683016,-0.872585893826025,-0.724922940047236,-0.575559751663931,-0.382910680493067,-0.206741394506914,-0.0876943832623182,0.00102115637936068,0.0710035264429376,0.162617367052137,0.252474893354721,0.310708565828765,0.365880796383732,0.416084875148288,0.465075593085634,0.474405216252848,0.456865014883013,0.443382944683178,0.403474589408341,0.363239952230389,0.336576602960155,0.287455882077036,0.220703193038832,0.157863337760646,0.107967697357629,0.0414036400446634,-0.0507123688060501,-0.0794608633633828,-0.0831238875413305,-0.13137537304193,-0.164962016443898,-0.176685223259751,-0.186616428685835,-0.217368498054487,-0.264016613890557,-0.283794905189576,-0.291398802978592,-0.28493944092785,-0.261760680419796,-0.25292812733936,-0.221087601934531,-0.153582935072739,-0.116238951630203,-0.128002943683944,-0.159425420400406,-0.133746014994253,-0.052183186447438,0.00772013170270599,0.0738100606252065,0.148745288014985,0.202258069203324,0.250570732560757,0.269663322047761,0.264710464721559,0.284124237956941,0.320165642864383,0.388743471298143,0.433581742202866,0.415743298780965,0.42611294551436,0.436727303675092,0.446054377764937,0.525129306800495,0.639774061430398,0.732216352184227,0.770890954012907,0.753388988803594,0.72808684684792,0.682302868239633,0.613375816206446,0.549998105603594,0.437695953074965], 
+                                    spanGaps: false,
+                                    }
+                             ]
+                             };
+                             var myLineChart = new Chart(ctx, {
+                             type: "line",
+                             data: data
+                             });
+                             <!--kuvablokki -->
+                             
+};
+	 </script>
+	 
+</head>
+<body>
+   
+    <!-- HEADER END-->
+    <div class="navbar navbar-inverse set-radius-zero" style="display: none;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+
+                    <img src="assets/img/logo.png" />
+                </a>
+
+            </div>
+
+            <div class="left-div">
+                <div class="user-settings-wrapper">
+                    <ul class="nav">
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-settings">
+                                <div class="media">
+                                    <a class="media-left" href="#">
+                                        <img src="assets/img/64-64.jpg" alt="" class="img-rounded" />
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Jhon Deo Alex </h4>
+                                        <h5>Developer & Designer</h5>
+
+                                    </div>
+                                </div>
+                                <hr />
+                                <h5><strong>Personal Bio : </strong></h5>
+                                Anim pariatur cliche reprehen derit.
+                                <hr />
+                                <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <!---
+						<ul id="menu-top" class="nav navbar-nav navbar-right">
+                                                    <li><a class="menu-top-active" href="out_tyomarkkina.html">Ty√∂markkinatilanne</a></li>
+							<li><a href="out_vaestonmuutos.html">V√§est√∂nmuutokset</a></li>
+                            
+
+                        </ul>
+						--->
+						<div class="btn-group">
+											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Taloustilanne<span class="caret"></span></button>
+											  <ul class="dropdown-menu">
+<li><a href="out_talous_SSS.html">Koko maa</a></li><li><a href="out_talous_109.html">H‰meenlinna</a></li><li><a href="out_talous_564.html">Oulu</a></li><li><a href="out_talous_091.html">Helsinki</a></li><li><a href="out_talous_092.html">Vantaa</a></li><li><a href="out_talous_286.html">Kouvola</a></li><li><a href="out_talous_405.html">Lappeenranta</a></li><li><a href="out_talous_853.html">Turku</a></li><li><a href="out_talous_167.html">Joensuu</a></li><li><a href="out_talous_609.html">Pori</a></li><li><a href="out_talous_179.html">Jyv‰skyl‰</a></li><li><a href="out_talous_837.html">Tampere</a></li><li><a href="out_talous_297.html">Kuopio</a></li><li><a href="out_talous_049.html">Espoo</a></li><li><a href="out_talous_905.html">Vaasa</a></li><li><a href="out_talous_398.html">Lahti</a></li>
+												
+											  </ul>
+					</div>
+						<div class="btn-group">
+											  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Ty√∂markkinatilanne<span class="caret"></span></button>
+											  <ul class="dropdown-menu">
+<li><a href="out_tyomarkkina_SSS.html">Koko maa</a></li><li><a href="out_tyomarkkina_109.html">H‰meenlinna</a></li><li><a href="out_tyomarkkina_564.html">Oulu</a></li><li><a href="out_tyomarkkina_091.html">Helsinki</a></li><li><a href="out_tyomarkkina_092.html">Vantaa</a></li><li><a href="out_tyomarkkina_286.html">Kouvola</a></li><li><a href="out_tyomarkkina_405.html">Lappeenranta</a></li><li><a href="out_tyomarkkina_853.html">Turku</a></li><li><a href="out_tyomarkkina_167.html">Joensuu</a></li><li><a href="out_tyomarkkina_609.html">Pori</a></li><li><a href="out_tyomarkkina_179.html">Jyv‰skyl‰</a></li><li><a href="out_tyomarkkina_837.html">Tampere</a></li><li><a href="out_tyomarkkina_297.html">Kuopio</a></li><li><a href="out_tyomarkkina_049.html">Espoo</a></li><li><a href="out_tyomarkkina_905.html">Vaasa</a></li><li><a href="out_tyomarkkina_398.html">Lahti</a></li>
+												
+											  </ul>
+					</div>
+						<div class="btn-group">
+						  <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">V√§est√∂nmuutokset<span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+<li><a href="out_vaestonmuutos_SSS.html">Koko maa</a></li><li><a href="out_vaestonmuutos_109.html">H‰meenlinna</a></li><li><a href="out_vaestonmuutos_564.html">Oulu</a></li><li><a href="out_vaestonmuutos_091.html">Helsinki</a></li><li><a href="out_vaestonmuutos_092.html">Vantaa</a></li><li><a href="out_vaestonmuutos_286.html">Kouvola</a></li><li><a href="out_vaestonmuutos_405.html">Lappeenranta</a></li><li><a href="out_vaestonmuutos_853.html">Turku</a></li><li><a href="out_vaestonmuutos_167.html">Joensuu</a></li><li><a href="out_vaestonmuutos_609.html">Pori</a></li><li><a href="out_vaestonmuutos_179.html">Jyv‰skyl‰</a></li><li><a href="out_vaestonmuutos_837.html">Tampere</a></li><li><a href="out_vaestonmuutos_297.html">Kuopio</a></li><li><a href="out_vaestonmuutos_049.html">Espoo</a></li><li><a href="out_vaestonmuutos_905.html">Vaasa</a></li><li><a href="out_vaestonmuutos_398.html">Lahti</a></li>
+							
+						  </ul>
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+        <div class="container">
+             <div class="row">
+                    <div class="col-md-12">
+                        <h1 tunniste="TM-otsikko"class="page-head-line">Taloustilanne:<br><style="font-size: 25px;"> H‰meenlinna , 07/2016</h1>
+                    </div>
+                </div>
+				 <div class="row"> <!-- Default panel & Primary Panel & Succes panel -->
+				 
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Ty√∂paikkojen lukum√§√§r√§
+                        </div>
+                        <div class="lukupaneeli">
+                            <p id="TM-luku-1">436</p>
+                        </div>
+                        <div class="panel-footer">
+                           
+                        </div>
+					
+                    </div>
+                </div>
+				
+				
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Muutos edelliseen kuukauteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: green;" id="TM-luku-2">+113</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Verrattuna viime vuoteen
+                        </div>
+                        <div class="lukupaneeli">
+                            <p style="color: green;" id="TM-luku-3">+115</p>
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                </div>
+				
+				
+            </div>
+			
+				<div class="row" style="padding-left:15px;padding-right:15px;"> 	<!-- TM-kuva1 -->
+				
+				<div class="panel panel-kuva" >
+									<h4 class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Aikasarja</a>
+									</h4>
+									
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+									<div class="panel-body">
+									<canvas id="TM-kuva-1" width="400" height="200" ></canvas>
+									  
+									</div>
+								</div>
+						
+			</div>	<!-- TM-kuva1 loppu -->
+				<div class="row" style="padding-left:15px;padding-right:15px;"> 	<!-- TM-kuva2 -->
+				
+				<div class="panel panel-kuva" >
+									<h4 class="panel-heading">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">Vertailu koko maan tilanteeseen</a>
+									</h4>
+									
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+									<div class="panel-body">
+									<canvas id="TM-kuva-2" width="400" height="200" ></canvas>
+									  
+									</div>
+								</div>
+						
+			</div>	<!-- TM-kuva2 loppu -->
+				
+          
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+        </div>
+    </div>
+    <!-- CONTENT-WRAPPER SECTION END-->
+  
+    <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+</body>
+</html>
