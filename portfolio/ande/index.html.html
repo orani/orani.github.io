@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SankeyID19f41c532b7</title>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Sankey generated in R 3.3.1 by googleVis 0.6.0 package -->
+<!-- Sun Oct 23 16:24:39 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDataSankeyID19f41c532b7 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "0 ehtoa",
+"Työllistyneiden osuus",
+0.498225692 
+],
+[
+ "1 ehto",
+"Työllistyneiden osuus",
+0.270679948 
+],
+[
+ "2 ehtoa",
+"Työllistyneiden osuus",
+0.1186440678 
+],
+[
+ "3 ehtoa",
+"Työllistyneiden osuus",
+0.07476635514 
+],
+[
+ "0 ehtoa",
+"Työttömäksi jääneiden osuus",
+0.3161816891 
+],
+[
+ "1 ehto",
+"Työttömäksi jääneiden osuus",
+0.3962754439 
+],
+[
+ "2 ehtoa",
+"Työttömäksi jääneiden osuus",
+0.3820621469 
+],
+[
+ "3 ehtoa",
+"Työttömäksi jääneiden osuus",
+0.4813084112 
+],
+[
+ "0 ehtoa",
+"Eläköityneiden osuus",
+0.001064584812 
+],
+[
+ "1 ehto",
+"Eläköityneiden osuus",
+0.003464703335 
+],
+[
+ "2 ehtoa",
+"Eläköityneiden osuus",
+0.001412429379 
+],
+[
+ "3 ehtoa",
+"Eläköityneiden osuus",
+0.004672897196 
+],
+[
+ "0 ehtoa",
+"Muiden osuus",
+0.1845280341 
+],
+[
+ "1 ehto",
+"Muiden osuus",
+0.3295799047 
+],
+[
+ "2 ehtoa",
+"Muiden osuus",
+0.4978813559 
+],
+[
+ "3 ehtoa",
+"Muiden osuus",
+0.4392523364 
+] 
+];
+data.addColumn('string','ehtojen_summa');
+data.addColumn('string','variable');
+data.addColumn('number','value');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartSankeyID19f41c532b7() {
+var data = gvisDataSankeyID19f41c532b7();
+var options = {};
+options["width"] = [450];
+options["height"] = [250];
+options["sankey"] = {  node: { nodePadding: 18, width: 6 }  ,link:{colorMode: 'gradient',color:{fill:'red'},
+    label: { fontName: 'Times-Roman',
+                         fontSize: 25,
+                         color: '#871b47',
+                         bold: true,
+                         italic: true } 
+}};
+
+
+    var chart = new google.visualization.Sankey(
+    document.getElementById('SankeyID19f41c532b7')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "sankey";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartSankeyID19f41c532b7);
+})();
+function displayChartSankeyID19f41c532b7() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID19f41c532b7"></script>
+
+<br>
+<br>
+<br>
+<!-- divChart -->
+  <center>
+<div id="SankeyID19f41c532b7" 
+  style="width: 450; height: 250;">
+</div>
+
+</center>
+</body>
+</html>
+
