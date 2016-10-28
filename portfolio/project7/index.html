@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="iso-8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -30,7 +30,7 @@ var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki'
   <script>
  
   function kuntakoodiOnload(kuntakoodi) {
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		
   } 
@@ -38,13 +38,13 @@ var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki'
   function kuntakoodiInputKeyPress(e) {
 		  if (e.keyCode==13) { 
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		}
   } 
   function vaihdaTeema(teema) {
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_"+teema+"_"+kuntakoodi+".HTML";
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_"+teema+"_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		}
    
@@ -73,9 +73,9 @@ onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
 					
-						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('vaestonmuutos')">VÃ¤estÃ¶nmuutokset</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('vaestonmuutos')">Väestönmuutokset</button>
 						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('talous')">Talous</button>
-						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('tyomarkkina')">TyÃ¶markkinatilanne</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('tyomarkkina')">Työmarkkinatilanne</button>
 						</div>
                     </div>
                 </div>
