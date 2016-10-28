@@ -30,7 +30,7 @@ var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa
   <script>
  
   function kuntakoodiOnload(kuntakoodi) {
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
+			  var urli="out_tyomarkkina_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
 		
   } 
@@ -38,13 +38,13 @@ var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa
   function kuntakoodiInputKeyPress(e) {
 		  if (e.keyCode==13) { 
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
+			  var urli="out_tyomarkkina_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
 		}
   } 
   function vaihdaTeema(teema) {
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_"+teema+"_"+kuntakoodi+".HTML";
+			  var urli="out_"+teema+"_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
 		}
    
