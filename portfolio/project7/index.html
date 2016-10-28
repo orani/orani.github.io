@@ -38,6 +38,7 @@ var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa
 		  if (e.keyCode==13) { 
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
 			  var urli="out_tyomarkkina_"+kuntakoodi+".HTML";
+			  alert(urli);
 			  window.open(urli,"theFrame");
 			   
 		}
