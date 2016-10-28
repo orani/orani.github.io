@@ -23,29 +23,28 @@
     <![endif]-->
      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js'></script>
 <script id="omatFunktiot">
-var datalist_kuntakoodit = ['SSS','109','564','091','092','286','405','853','167','609','179','837','297','049','905','398'];
-var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa','Kouvola','Lappeenranta','Turku','Joensuu','Pori','JyvÃ¤skylÃ¤','Tampere','Kuopio','Espoo','Vaasa','Lahti'];
-
+var datalist_kuntakoodit = ['SSS','SSS','109','564','091','092','286','405','853','167','609','179','837','297','049','905','398'];
+var datalist_kuntanimet = ['Koko maa','Koko maa','H�meenlinna','Oulu','Helsinki','Vantaa','Kouvola','Lappeenranta','Turku','Joensuu','Pori','Jyv�skyl�','Tampere','Kuopio','Espoo','Vaasa','Lahti'];
+  </script>
+  
+  <script>
  
   function kuntakoodiOnload(kuntakoodi) {
-			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
-	  
 		
   } 
   
   function kuntakoodiInputKeyPress(e) {
 		  if (e.keyCode==13) { 
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
-			  alert(urli);
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
-			   
 		}
   } 
   function vaihdaTeema(teema) {
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="out_"+teema+"_"+kuntakoodi+".html";
+			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_"+teema+"_"+kuntakoodi+".HTML";
 			  window.open(urli,"theFrame");
 		}
    
@@ -56,7 +55,7 @@ var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa
   
 	 </script>
 </head>
-<body>
+<body onload="kuntakoodiOnload('091');">
 <section class="menu-section">
 
         <div class="container">
@@ -66,7 +65,7 @@ var datalist_kuntanimet = ['Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa
 onclick="tyhjennaInput();"
 onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
 <datalist id="kuntakooditDatalist">
-<datalist id="kuntakooditDatalist"> <option value='Koko maa'>SSS</option> <option value='HÃ¤meenlinna'>109</option> <option value='Oulu'>564</option> <option value='Helsinki'>091</option> <option value='Vantaa'>092</option> <option value='Kouvola'>286</option> <option value='Lappeenranta'>405</option> <option value='Turku'>853</option> <option value='Joensuu'>167</option> <option value='Pori'>609</option> <option value='JyvÃ¤skylÃ¤'>179</option> <option value='Tampere'>837</option> <option value='Kuopio'>297</option> <option value='Espoo'>049</option> <option value='Vaasa'>905</option> <option value='Lahti'>398</option> </datalist>
+<datalist id="kuntakooditDatalist"> <option value='Koko maa'>SSS</option> <option value='Koko maa'>SSS</option> <option value='H�meenlinna'>109</option> <option value='Oulu'>564</option> <option value='Helsinki'>091</option> <option value='Vantaa'>092</option> <option value='Kouvola'>286</option> <option value='Lappeenranta'>405</option> <option value='Turku'>853</option> <option value='Joensuu'>167</option> <option value='Pori'>609</option> <option value='Jyv�skyl�'>179</option> <option value='Tampere'>837</option> <option value='Kuopio'>297</option> <option value='Espoo'>049</option> <option value='Vaasa'>905</option> <option value='Lahti'>398</option> </datalist>
  </datalist>
  </div>
 						
@@ -81,10 +80,9 @@ onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
                     </div>
                 </div>
 
-           
         </div>
     </section>
-<iframe name="theFrame" src="out_tyomarkkina_091.html" style="position:fixed; top:10%; 
+<iframe name="theFrame" src="" style="position:fixed; top:10%; 
 left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; zoom:0.6;" ></iframe>
 
 </body>
