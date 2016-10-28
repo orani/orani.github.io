@@ -24,13 +24,13 @@
      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js'></script>
 <script id="omatFunktiot">
 var datalist_kuntakoodit = ['SSS','SSS','109','564','091','092','286','405','853','167','609','179','837','297','049','905','398'];
-var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki','Vantaa','Kouvola','Lappeenranta','Turku','Joensuu','Pori','Jyväskylä','Tampere','Kuopio','Espoo','Vaasa','Lahti'];
+var datalist_kuntanimet = ['Koko maa','Koko maa','HÃ¤meenlinna','Oulu','Helsinki','Vantaa','Kouvola','Lappeenranta','Turku','Joensuu','Pori','JyvÃ¤skylÃ¤','Tampere','Kuopio','Espoo','Vaasa','Lahti'];
   </script>
   
   <script>
  
   function kuntakoodiOnload(kuntakoodi) {
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".html";
+			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		
   } 
@@ -38,13 +38,13 @@ var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki'
   function kuntakoodiInputKeyPress(e) {
 		  if (e.keyCode==13) { 
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_tyomarkkina_"+kuntakoodi+".html";
+			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		}
   } 
   function vaihdaTeema(teema) {
 			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
-			  var urli="C:/Users/user1/r_crap/Kuntaraportti/V2/html-out/out_"+teema+"_"+kuntakoodi+".html";
+			  var urli="out_"+teema+"_"+kuntakoodi+".html";
 			  window.open(urli,"theFrame");
 		}
    
@@ -65,7 +65,7 @@ var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki'
 onclick="tyhjennaInput();"
 onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
 <datalist id="kuntakooditDatalist">
-<datalist id="kuntakooditDatalist"> <option value='Koko maa'>SSS</option> <option value='Koko maa'>SSS</option> <option value='Hämeenlinna'>109</option> <option value='Oulu'>564</option> <option value='Helsinki'>091</option> <option value='Vantaa'>092</option> <option value='Kouvola'>286</option> <option value='Lappeenranta'>405</option> <option value='Turku'>853</option> <option value='Joensuu'>167</option> <option value='Pori'>609</option> <option value='Jyväskylä'>179</option> <option value='Tampere'>837</option> <option value='Kuopio'>297</option> <option value='Espoo'>049</option> <option value='Vaasa'>905</option> <option value='Lahti'>398</option> </datalist>
+<datalist id="kuntakooditDatalist"> <option value='Koko maa'>SSS</option> <option value='Koko maa'>SSS</option> <option value='HÃ¤meenlinna'>109</option> <option value='Oulu'>564</option> <option value='Helsinki'>091</option> <option value='Vantaa'>092</option> <option value='Kouvola'>286</option> <option value='Lappeenranta'>405</option> <option value='Turku'>853</option> <option value='Joensuu'>167</option> <option value='Pori'>609</option> <option value='JyvÃ¤skylÃ¤'>179</option> <option value='Tampere'>837</option> <option value='Kuopio'>297</option> <option value='Espoo'>049</option> <option value='Vaasa'>905</option> <option value='Lahti'>398</option> </datalist>
  </datalist>
  </div>
 						
@@ -73,9 +73,9 @@ onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
 					
-						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('vaestonmuutos')">Väestönmuutokset</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('vaestonmuutos')">VÃ¤estÃ¶nmuutokset</button>
 						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('talous')">Talous</button>
-						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('tyomarkkina')">Työmarkkinatilanne</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('tyomarkkina')">TyÃ¶markkinatilanne</button>
 						</div>
                     </div>
                 </div>
