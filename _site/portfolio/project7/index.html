@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<body>
+<head>
+    <meta charset="iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Kuntaraportti</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js'></script>
+<script id="omatFunktiot">
+var datalist_kuntakoodit = ['SSS','SSS','109','564','091','092','286','405','853','167','609','179','837','297','049','905','398'];
+var datalist_kuntanimet = ['Koko maa','Koko maa','Hämeenlinna','Oulu','Helsinki','Vantaa','Kouvola','Lappeenranta','Turku','Joensuu','Pori','Jyväskylä','Tampere','Kuopio','Espoo','Vaasa','Lahti'];
+  </script>
+  
+  <script>
+ 
+  function kuntakoodiOnload(kuntakoodi) {
+			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
+			  window.open(urli,"theFrame");
+		
+  } 
+  
+  function kuntakoodiInputKeyPress(e) {
+		  if (e.keyCode==13) { 
+			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
+			  var urli="out_tyomarkkina_"+kuntakoodi+".html";
+			  window.open(urli,"theFrame");
+		}
+  } 
+  function vaihdaTeema(teema) {
+			  var kuntakoodi=datalist_kuntakoodit[datalist_kuntanimet.indexOf(document.getElementById("kuntakoodi_input").value)];
+			  var urli="out_"+teema+"_"+kuntakoodi+".html";
+			  window.open(urli,"theFrame");
+		}
+   
+   function tyhjennaInput() {   document.getElementById('kuntakoodi_input').value="";
 
-<br>
-<br><h1>
+   }
+  
+  
+	 </script>
+</head>
+<body onload="kuntakoodiOnload('091');">
+<section class="menu-section">
 
-<center>
-	<a href="out_tyomarkkina_SSS.html">Työmarkkinatilanne</a>
-</center>
-</h1>
-</body>
+        <div class="container">
+
+<div class="menu-input" style="left:15px;" >
+<input class="menu-input-box"  type="text" list="kuntakooditDatalist" id="kuntakoodi_input"
+onclick="tyhjennaInput();"
+onkeypress="kuntakoodiInputKeyPress(event);" value="Helsinki">
+<datalist id="kuntakooditDatalist">
+<datalist id="kuntakooditDatalist"> <option value='Koko maa'>SSS</option> <option value='Koko maa'>SSS</option> <option value='Hämeenlinna'>109</option> <option value='Oulu'>564</option> <option value='Helsinki'>091</option> <option value='Vantaa'>092</option> <option value='Kouvola'>286</option> <option value='Lappeenranta'>405</option> <option value='Turku'>853</option> <option value='Joensuu'>167</option> <option value='Pori'>609</option> <option value='Jyväskylä'>179</option> <option value='Tampere'>837</option> <option value='Kuopio'>297</option> <option value='Espoo'>049</option> <option value='Vaasa'>905</option> <option value='Lahti'>398</option> </datalist>
+ </datalist>
+ </div>
+						
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+					
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('vaestonmuutos')">Väestönmuutokset</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('talous')">Talous</button>
+						  <button class="btn btn-primary dropdown-toggle" onclick="vaihdaTeema('tyomarkkina')">Työmarkkinatilanne</button>
+						</div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+<iframe name="theFrame" src="" style="position:fixed; top:10%; 
+left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; zoom:0.6;" ></iframe>
+
 </body>
 </html>

@@ -41,9 +41,9 @@ body {
 .page-head-line {
     font-weight: 900;
     padding-bottom: 20px;
-    border-bottom: 2px solid #F0677C;
+    border-bottom: 2px solid #e41a1c;
     text-transform: uppercase;
-    color: #F0677C;
+    color: #e41a1c;
     font-size: 20px;
     margin-bottom: 40px;
 }
@@ -78,8 +78,8 @@ background-color:#F0677C;
    HEADER SECTION STYLES
  ============================================================ */
 header {
-    background-color: #F0677C;
-    color: #fff;
+    background-color: #1f78b4;
+    color: #1f78b4;
     padding: 10px;
     text-align: right;
 }
@@ -157,16 +157,20 @@ header {
 /* MENU LINKS SECTION*/
 
 .menu-section {
-    background-color: #3D3D3D;
+    background-color: #67a9cf;
+	font-size: 25px;
 }
 
 #menu-top a {
     color: #FFF;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 800;
     padding: 10px 10px 10px 10px;
     text-transform: uppercase;
 }
+.menu-input { 	left:15px;	}
+.menu-input-box { 	font-size: 40px;}	
+
 
 .menu-top-active {
     background-color: #C36464;
@@ -200,7 +204,7 @@ footer {
     padding: 10px;
     color: #fff;
     font-size: 12px;
-    background-color: #C36464;
+    background-color: #1f78b4;
 }
 
     footer a, footer a:hover {

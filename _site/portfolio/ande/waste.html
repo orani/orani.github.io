@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    
+<script>
+document.getElementById("demo").addEventListener("mouseover", mouseOver);
+document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+
+function bigImg(x) {
+    x.style.height = '64px';
+    x.style.width = '64px';
+}
+
+function normalImg(x) {
+    x.style.height = '32px';
+    x.style.width = '32px';
+}
+</script>
+<body>
+
+<h1 id="demo" >Mouse over me</h1>
+<img src="http://static.iltalehti.fi/jaakiekko/21837653_jk.jpg" style="height=15px;width=64px;" onmouseover="bigImg(this);">
+
+
+
+
+
+</body>
+</html>
