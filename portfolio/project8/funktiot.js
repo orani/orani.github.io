@@ -29,11 +29,11 @@ parsiFaili=function(tekstiRaw) {
 	rivit=tekstiRaw.split("\n");	
 	sarakkeita=rivit[0].split(';').length;
 	output=[];
-	output.push('<li>Rivej‰:'+rivit.length+'</li><li>Sarakkeita:'+sarakkeita+'</li>');
+	output.push('<li>Havaintoja:'+rivit.length+'</li><li>Sarakkeita:'+sarakkeita+'</li>');
 	document.getElementById('info').innerHTML=output;
 	
 	cols=['#a50026','#d73027','#f46d43','#fdae61','#fee08b','#d9ef8b','#a6d96a','#66bd63','#1a9850','#006837'].reverse()
-	/* Oletetaan, ett‰ sarakkeet 1 & 2 ovat kuntakoodi & -nimi ja ett‰ eka rivi on otsikkorivi */
+	/* Oletetaan, ett√§ sarakkeet 1 & 2 ovat kuntakoodi & -nimi ja ett√§ eka rivi on otsikkorivi */
 	output=[];
 	for (var s=2;s<sarakkeita;s++) {
 	muuttujat.push(rivit[0].split(";")[s]);
@@ -101,7 +101,7 @@ function muuttujanVaihto(selekti) {
 }
 
 
-/* V‰ritys */
+/* V√§ritys */
 
 function varita(koodit,numbs,luokkia) {
 	
