@@ -51,7 +51,7 @@ table tr:nth-child(odd) {
    background-color:#fff;
 }
 table th {
-    background-color: black;
+    background-color: #4CAF50;
     color: white;
 }
 #limitsTBL {     width:40%; padding: 3px;     text-align: left; }
