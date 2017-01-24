@@ -113,7 +113,7 @@ function varita(koodit,numbs,luokkia) {
 			for (r=0;r<rajat.length;r++) {
 			if (luvutObj[i].luvut[valittuSarake]>rajat[r]) { document.getElementById('tilastointialueet:kunta_'+luvutObj[i].kuntakoodi).style='fill:'+cols[r]; }	
 			}
-		} catch(err) {    alert('Kuntaa '+luvutObj[i].kuntakoodi+'-'+luvutObj[i].kuntaNimi+'ei löydy kartalta')  }
+		} catch(err) {    alert('Kuntaa '+luvutObj[i].kuntakoodi+'-'+luvutObj[i].kuntaNimi+' ei löydy kartalta')  }
 	}
 	output=[];
 	
